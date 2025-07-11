@@ -9,7 +9,7 @@ export const navigation = [
                 links: [
                     {
                         url: '/about',
-                        title: 'Get to know us',
+                        title: '',
                     }
                 ]
             },

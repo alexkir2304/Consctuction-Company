@@ -1,10 +1,133 @@
 @import "tailwindcss";
 
-
-.nav {
-    @apply flex gap-0 w-full h-[100px] fixed ;
+html, body {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
+@theme {
+    --color-nav-border: #e1e3ef;
+    --color-nav-bg-hover: #f1f2f6;
+    --color-primary-blue: #007aff;
+}
+
+
+@utility flex-center {
+    @apply flex justify-center items-center;
+}
+
+@utility flex-center-col {
+    @apply flex flex-col justify-center items-center;
+}
+
+
+
+.navbar {
+    @apply flex justify-between gap-0 w-[100vw] h-[100px] fixed text-white z-999 border-b-1 border-b-nav-border;
+
+    .navbar-logo {
+        @apply flex-center w-[25vw] text-5xl border-r-1 border-r-nav-border box-border outline-none ;
+
+    }
+
+    .navbar-menu {
+        @apply flex justify-end lg:justify-around  w-[50vw] border-r-1 border-r-nav-border ;
+
+        .navbar-menu__item {
+            @apply justify-center items-center relative w-[22.5%] duration-400 ease-in-out hidden lg:flex;
+
+            a {
+                @apply flex-center h-full w-full ;
+            }
+
+            &:hover {
+                @apply bg-nav-bg-hover text-gray-800;
+
+                &::before {
+                    content: '';
+                    @apply w-[100%]  duration-400 ease-in-out;
+                }
+
+                .navbar-menu__item__dropdown {
+                    @apply visible opacity-100 text-gray-800 duration-400 ease-in-out
+                }
+            }
+
+            &::before {
+                content: '';
+                @apply  absolute top-0 left-0 w-[0%] h-[4px] bg-orange-500
+            }
+
+            .navbar-menu__item__dropdown {
+                @apply  flex invisible justify-start opacity-0 bg-nav-bg-hover fixed top-[100px] left-0 w-[100vw] h-[35vh] duration-400 ease-in-out;
+
+                div:first-child {
+                    @apply bg-primary-blue text-white;
+
+                }
+
+                .navbar-menu__item__dropdown__item {
+                    @apply flex flex-col justify-start gap-4 w-[25vw] border-r-1 border-r-nav-border p-5;
+
+                    .links {
+                        @apply flex  flex-col;
+
+                        .link:hover {
+                            @apply text-primary-blue;
+                        }
+                    }
+
+                    h1 {
+                        @apply text-[1.3rem];
+                    }
+                }
+
+            }
+
+        }
+
+        .navbar-menu__hamburger {
+            @apply flex-center relative gap-3 w-[10vh] lg:w-[10%]  cursor-pointer border-l-1 border-l-nav-border duration-400 ease-in-out;
+
+            &:hover {
+                span:first-child {
+                    width: 70%;
+                }
+            }
+
+            .navbar-menu__hamburger__item {
+                @apply  border-b-2 border-b-nav-border h-[2px] w-full duration-400 ease-in-out;
+            }
+        }
+
+    }
+    .navbar-sideLinks {
+        @apply flex justify-around items-center  w-[45vw] lg:w-[25vw];
+
+
+        .navbar-sideLinks__item {
+            @apply flex-center h-full relative cursor-pointer duration-400 ease-in-out;
+
+            &:hover {
+                @apply bg-white text-gray-800;
+
+                &::before {
+                    @apply w-[100%] duration-400 ease-in-out ;
+                }
+            }
+
+            &::before {
+                content: '';
+                @apply  absolute top-0 left-0 w-[0%] h-[3px] bg-orange-500
+            }
+
+        }
+
+    }
+
+}
 
 .home{
     video {
