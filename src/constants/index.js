@@ -165,6 +165,57 @@ export const navigation = [
     {
         title: 'Our projects',
         link: '/projects',
+        menuSectors: [
+            {
+                title: 'Our services',
+                text: 'Our people bring their technical knowledge, experience, and resourcefulness to the delivery of our construction services. Our expertise and value-added offerings support our clients throughout the lifespan of the construction process.',
+
+            },
+            {
+                title: 'Finished projects',
+                links: [
+                    {
+                        url: '/projects',
+                        title: 'Preconsctuction',
+                    },
+                    {
+                        url: '/projects',
+                        title: 'Construction management',
+                    },
+                    {
+                        url: '/projects',
+                        title: 'Project management',
+                    },
+                    {
+                        url: '/projects',
+                        title: 'Lean construction',
+                    },
+
+                ]
+            },
+            {
+                title: 'Current projects',
+                links: [
+                    {
+                        url: '/projects',
+                        title: 'Payment program',
+                    },
+                    {
+                        url: '/projects',
+                        title: 'Fabrication shop',
+                    },
+                    {
+                        url: '/projects',
+                        title: 'Insurance',
+                    },
+                    {
+                        url: '/projects',
+                        title: 'Manufacturing',
+                    },
+
+                ]
+            },
+        ]
     },
 
     {

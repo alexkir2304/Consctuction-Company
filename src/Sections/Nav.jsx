@@ -2,52 +2,123 @@ import React from 'react';
 import {navigation} from "../constants/index.js";
 import {Link} from "react-router";
 
-
 const Nav = () => {
+
     return (
-        <div className='navbar'>
-            <Link to={'/'} className='navbar-logo '>
-                <h1>
-                    Turner
-                </h1>
-            </Link>
 
-            <div className='navbar-menu'>
-                {navigation.map((item, index) => (
-                    <div key={index} className='navbar-menu__item relative'>
+        <>
+            <div className='navbar'>
+                <Link to={'/'} className='navbar-logo '>
+                    <h1>
+                        Turner
+                    </h1>
+                </Link>
 
-                        <Link to={item.link} className=''>{item.title}</Link>
+                <div className='navbar-menu'>
+                    {navigation.map((item, index) => (
+                        <div key={index} className='navbar-menu__item relative'>
 
-                        <div className='navbar-menu__item__dropdown '>
-                            {item.menuSectors && item.menuSectors.map((sector, index) => (
-                                <div key={index} className='navbar-menu__item__dropdown__item '>
-                                    <h1>{sector.title}</h1>
-                                    <p>{sector.text && sector.text}</p>
-                                    <div className='links '>{sector.links && sector.links.map((link, index) => (
-                                        <Link key={index} to={link.url} className='link'>{link.title}</Link>
-                                    ))}
+                            <Link to={item.link} className='navbar-menu__item__mainLink'>{item.title}</Link>
+
+                            <div className='navbar-menu__item__dropdown '>
+                                {item.menuSectors && item.menuSectors.map((sector, index) => (
+                                    <div key={index} className='navbar-menu__item__dropdown__item '>
+                                        <h1>{sector.title}</h1>
+                                        <p>{sector.text && sector.text}</p>
+                                        <div className='links '>{sector.links && sector.links.map((link, index) => (
+                                            <Link key={index} to={link.url} className='link'>{link.title}</Link>
+                                        ))}
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+
+                    <div onClick={() => {
+                        const el = document.getElementsByClassName('navbarMobile')[0];
+                        console.log(el)
+                        // el.style.visibility = 'visible';
+                        el.classList.add('active');
+
+                    }} className='navbar-menu__hamburger'>
+                        <div className='flex flex-col justify-center items-end gap-2 w-[70%]'>
+                            <span className="navbar-menu__hamburger__item"></span>
+                            <span className="navbar-menu__hamburger__item"></span>
+                            <span className="navbar-menu__hamburger__item"></span>
                         </div>
                     </div>
-                ))}
+                </div>
 
-                <div className='navbar-menu__hamburger'>
-                    <div className='flex flex-col justify-center items-end gap-3 w-1/2'>
-                        <span className="navbar-menu__hamburger__item"></span>
-                        <span className="navbar-menu__hamburger__item"></span>
-                        <span className="navbar-menu__hamburger__item"></span>
-                    </div>
-
+                <div className='navbar-sideLinks '>
+                    <button className='navbar-sideLinks__item w-1/3'> Contact us</button>
+                    <Link to={'/subcontractors'} className='navbar-sideLinks__item w-2/3'>Become a subcontractor</Link>
                 </div>
             </div>
 
-            <div className='navbar-sideLinks '>
-                <button className='navbar-sideLinks__item w-1/3'> Contact us </button>
-                <Link to={'/subcontractors'} className='navbar-sideLinks__item w-2/3'>Become a subcontractor</Link>
+            <div className="navbarMobile">
+
+                <div className="navbarMobile-sidelineLeft">
+
+                </div>
+
+                <div className="navbarMobile-menu">
+                    <div className="navbarMobile-menu__button">
+                        <button onClick={()=> {
+                            const el = document.getElementsByClassName('navbarMobile')[0];
+                            console.log(el)
+                            // el.style.visibility = 'hidden';
+                            el.classList.remove('active');
+                        }}>
+
+                            <span>Closing button</span>
+                            <span></span>
+                        </button>
+                    </div>
+
+                    {navigation.map((item, index) => (
+                        <div key={index} className="navbarMobile-menu__item">
+                            <div className='navbarMobile-menu__item__title'>
+                                <a href={item.link}>
+                                    {item.title}
+                                </a>
+                                <button onClick={(e) => {
+
+                                    console.log(e.target.parentNode.parentNode.parentNode.lastChild)
+                                    const el = e.target.parentNode.parentNode.parentNode.lastChild
+
+
+                                    // el.style.display = 'flex'
+                                    el.classList.toggle("navbarMobile-menu__item__content__active")
+
+                                }} className="navbarMobile-menu__item__btn">
+                                    <img src="/orange-arrow.svg" alt=""/>
+                                </button>
+                            </div>
+                            <div className='navbarMobile-menu__item__content'>
+
+
+                                    {item.menuSectors && item.menuSectors.map((sector, index) => (
+                                        <div key={index} className='content'>
+                                            <h1>{sector.title}</h1>
+                                            {/*<p>{sector.text && sector.text}</p>*/}
+                                            <div className='links '>{sector.links && sector.links.map((link, index) => (
+                                                <Link key={index} to={link.url} className='link'>{link.title}</Link>
+                                            ))}
+                                            </div>
+                                        </div>
+                                    ))}
+
+
+                            </div>
+                        </div>
+                    ))}
+
+                </div>
+
             </div>
-        </div>
+        </>
+
     );
 };
 
