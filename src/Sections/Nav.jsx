@@ -4,6 +4,50 @@ import {Link} from "react-router";
 
 const Nav = () => {
 
+
+    const navBarScroll = () => {
+
+        const el = document.getElementsByClassName("navbar");
+
+        let lastScrollY = window.scrollY;
+
+        window.onscroll = () => {
+
+            console.log(window.scrollY);
+
+            let currentScrollY = window.scrollY;
+
+            if (currentScrollY < lastScrollY) {                                     //the user is scrolling up
+                el[0].classList.remove("navbar-hidden")
+                window.scrollY >= 200 ?  el[0].classList.add("nabvar-scrolled-up") : el[0].classList.remove("nabvar-scrolled-up")
+            } else {                                                                //the user is scrolling down
+                if (window.scrollY >= 200 )  {
+                    el[0].classList.remove("nabvar-scrolled-up")
+                    el[0].classList.add("navbar-hidden")
+                } else if (window.scrollY >= 100 && window.scrollY < 200)  {
+                    el[0].classList.add("navbar-hidden");
+                }
+            }
+
+            lastScrollY = currentScrollY;
+
+            // if (window.scrollY >= 200) {
+            //     // return
+            // } else {
+            //     window.scrollY >= 100 ? el[0].classList.add("navbar-hidden") : el[0].classList.remove("navbar-hidden");
+            // }
+
+
+        }
+
+
+    }
+
+    useEffect(() => {
+        navBarScroll()
+    },[])
+
+
     return (
 
         <>

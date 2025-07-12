@@ -8,6 +8,9 @@ const Home = () => {
                     <video src="/home-video.mp4" className='w-[100%] h-full object-cover object-center' autoPlay={false} muted loop playsInline={true} ></video>
                 </div>
             </header>
+
+            <div className='h-[100vh]'>sometext</div>
+            <div className='h-[100vh]'>sometext</div>
         </div>
     );
 };

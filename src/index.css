@@ -22,10 +22,10 @@ html, body {
 }
 
 .navbar {
-    @apply flex justify-between gap-0 w-[100vw] h-[100px] fixed text-white z-999 border-b-1 border-b-nav-border;
+    @apply flex justify-between gap-0 w-[100vw] h-[100px] fixed text-white z-999 border-b-1 border-b-nav-border duration-800 ease-in-out;
 
     .navbar-logo {
-        @apply flex-center w-[35vw] lg:w-[25vw] text-6xl font-bold border-r-1 border-r-nav-border box-border outline-none ;
+        @apply flex-center w-[35vw] lg:w-[25vw] text-3xl md:text-5xl lg:text-6xl font-bold border-r-1 border-r-nav-border box-border outline-none ;
 
     }
 
@@ -127,6 +127,34 @@ html, body {
 
 }
 
+.navbar-hidden {
+    background-color: var(--color-nav-bg-hover);
+    color: var(--text-gray-800);
+    transform: translateY(-100px);
+    /*animation: myAnimation 1s ;*/
+}
+
+.nabvar-scrolled-up {
+    background-color: var(--color-nav-bg-hover);
+    color: var(--text-gray-800);
+}
+
+@keyframes myAnimation {
+    0% {
+
+    }
+
+    20% {
+
+
+
+        background-color: var(--color-nav-bg-hover);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
 .navbarMobile {
     @apply flex invisible fixed w-[100vw] h-[100vh] opacity-0 z-9999 bg-nav-bg-hover duration-400 ease-in;
     transform: translate(0, -100px);
@@ -161,6 +189,9 @@ html, body {
 
                 a {
                     @apply w-1/2 m-auto;
+                    &:hover {
+                        @apply text-primary-blue;
+                    }
                 }
                 button {
                     @apply flex w-full justify-end w-1/2 cursor-pointer;
@@ -182,6 +213,9 @@ html, body {
 
                     .links {
                         @apply flex flex-col gap-2 opacity-70 text-[1rem];
+                        a:hover {
+                            @apply text-primary-blue;
+                        }
 
                     }
 
