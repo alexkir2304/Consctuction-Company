@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {navigation} from "../constants/index.js";
 import {Link} from "react-router";
 
@@ -39,7 +39,7 @@ const Nav = () => {
                         const el = document.getElementsByClassName('navbarMobile')[0];
                         console.log(el)
                         // el.style.visibility = 'visible';
-                        el.classList.add('active');
+                        el.classList.add('navbarMobile-active');
 
                     }} className='navbar-menu__hamburger'>
                         <div className='flex flex-col justify-center items-end gap-2 w-[70%]'>
@@ -64,14 +64,14 @@ const Nav = () => {
 
                 <div className="navbarMobile-menu">
                     <div className="navbarMobile-menu__button">
-                        <button onClick={()=> {
+                        <button onClick={() => {
                             const el = document.getElementsByClassName('navbarMobile')[0];
                             console.log(el)
                             // el.style.visibility = 'hidden';
-                            el.classList.remove('active');
+                            el.classList.remove('navbarMobile-active');
                         }}>
 
-                            <span>Closing button</span>
+                            <span></span>
                             <span></span>
                         </button>
                     </div>
@@ -79,43 +79,56 @@ const Nav = () => {
                     {navigation.map((item, index) => (
                         <div key={index} className="navbarMobile-menu__item">
                             <div className='navbarMobile-menu__item__title'>
-                                <a href={item.link}>
+                                <Link onClick={() => {
+
+                                    const mobileNav = document.getElementsByClassName('navbarMobile')[0];
+                                    mobileNav.classList.remove('navbarMobile-active');
+
+                                }} to={item.link}>
                                     {item.title}
-                                </a>
+                                </Link>
                                 <button onClick={(e) => {
 
-                                    console.log(e.target.parentNode.parentNode.parentNode.lastChild)
-                                    const el = e.target.parentNode.parentNode.parentNode.lastChild
-
-
-                                    // el.style.display = 'flex'
+                                    const el = e.target.parentNode.parentNode.lastChild
                                     el.classList.toggle("navbarMobile-menu__item__content__active")
 
+                                    console.log(el.scrollHeight)
+
+                                    if (el.style.maxHeight) {
+                                        el.style.maxHeight = null
+                                    } else {
+                                        el.style.maxHeight = el.scrollHeight + 'px'
+                                    }
+
                                 }} className="navbarMobile-menu__item__btn">
-                                    <img src="/orange-arrow.svg" alt=""/>
+                                    <img onClick={(e) => e.target = e.target.parentNode} src="/orange-arrow.svg" alt=""/>
                                 </button>
                             </div>
+
                             <div className='navbarMobile-menu__item__content'>
 
+                                {item.menuSectors && item.menuSectors.map((sector, index) => (
+                                    <div key={index} className='content'>
+                                        <h1>{sector.title}</h1>
+                                        {/*<p>{sector.text && sector.text}</p>*/}
+                                        <div className='links '>{sector.links && sector.links.map((link, index) => (
+                                            <Link onClick={() => {
 
-                                    {item.menuSectors && item.menuSectors.map((sector, index) => (
-                                        <div key={index} className='content'>
-                                            <h1>{sector.title}</h1>
-                                            {/*<p>{sector.text && sector.text}</p>*/}
-                                            <div className='links '>{sector.links && sector.links.map((link, index) => (
-                                                <Link key={index} to={link.url} className='link'>{link.title}</Link>
-                                            ))}
-                                            </div>
+                                                const mobileNav = document.getElementsByClassName('navbarMobile')[0];
+                                                mobileNav.classList.remove('navbarMobile-active');
+
+                                            }} key={index} to={link.url} className='link'>{link.title}</Link>
+                                        ))}
                                         </div>
-                                    ))}
-
-
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     ))}
+                </div>
+                <div className="navbarMobile-sidelineLeft">
 
                 </div>
-
             </div>
         </>
 
