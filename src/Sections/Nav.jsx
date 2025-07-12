@@ -4,7 +4,6 @@ import {Link} from "react-router";
 
 const Nav = () => {
 
-
     const navBarScroll = () => {
 
         const el = document.getElementsByClassName("navbar");
@@ -30,17 +29,7 @@ const Nav = () => {
             }
 
             lastScrollY = currentScrollY;
-
-            // if (window.scrollY >= 200) {
-            //     // return
-            // } else {
-            //     window.scrollY >= 100 ? el[0].classList.add("navbar-hidden") : el[0].classList.remove("navbar-hidden");
-            // }
-
-
         }
-
-
     }
 
     useEffect(() => {
