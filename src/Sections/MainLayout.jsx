@@ -1,6 +1,6 @@
-import Nav from "../Sections/Nav.jsx";
+import Nav from "./Nav.jsx";
 import {Outlet} from "react-router";
-import Footer from "../Sections/Footer.jsx";
+import Footer from "./Footer.jsx";
 
 export const MainLayout = () => {
     return (

@@ -12,8 +12,6 @@ const Nav = () => {
 
         window.onscroll = () => {
 
-            console.log(window.scrollY);
-
             let currentScrollY = window.scrollY;
 
             if (currentScrollY < lastScrollY) {                                     //the user is scrolling up
@@ -41,7 +39,7 @@ const Nav = () => {
 
         <>
             <div className='navbar'>
-                <Link to={'/'} className='navbar-logo '>
+                <Link to={'/home'} className='navbar-logo '>
                     <h1>
                         Turner
                     </h1>

@@ -1,7 +1,7 @@
 export const navigation = [
     {
         title: 'Our company',
-        link: '/',
+        link: '/about',
         menuSectors: [
             {
                 title: 'AboutUs',
@@ -167,7 +167,7 @@ export const navigation = [
         link: '/projects',
         menuSectors: [
             {
-                title: 'Our services',
+                title: 'Our projects',
                 text: 'Our people bring their technical knowledge, experience, and resourcefulness to the delivery of our construction services. Our expertise and value-added offerings support our clients throughout the lifespan of the construction process.',
 
             },

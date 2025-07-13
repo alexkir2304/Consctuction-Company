@@ -5,6 +5,7 @@ html, body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    overflow-x: hidden;
 }
 
 @theme {
@@ -139,7 +140,6 @@ html, body {
     color: var(--text-gray-800);
 }
 
-
 .navbarMobile {
     @apply flex invisible fixed w-[100vw] h-[100vh] opacity-0 z-9999 bg-nav-bg-hover duration-400 ease-in;
     transform: translate(0, -100px);
@@ -226,56 +226,7 @@ html, body {
 }
 
 .home{
-    @apply flex-center w-full relative;
-
-    .home-title {
-        @apply flex flex-col justify-start gap-7 absolute left-20 lg:left-40 text-nav-border text-7xl duration-400 ease-in-out;
-
-        h1 {
-            span {
-                @apply text-9xl text-orange-500
-            }
-        }
-
-        .home-title__item {
-            @apply flex  w-[60vw] cursor-pointer ;
-
-            .question {
-                @apply w-1/2 text-2xl text-end;
-            }
-
-            .link {
-                @apply flex flex-col justify-center items-start  w-1/2 ;
-
-                img {
-                    @apply h-[1.5rem] rotate-[-90deg];
-                }
-            }
-
-            &:hover {
-                img{
-                    @apply translate-x-15 duration-400 ease-in-out;
-                }
-            }
-        }
-
-
-        h1:hover {
-            @apply tracking-[0.4rem] duration-400 ease-in-out;
-        }
-    }
-
-    .come-video {
-        @apply absolute w-full left-0 right-0
-    }
-
-
-
-    .passions-conflict-regular {
-        font-family: "Passions Conflict", cursive;
-        font-weight: 400;
-        font-style: normal;
-    }
+    @apply flex-center-col w-full ;
 
     .home-popup {
         @apply flex flex-col lg:flex-row invisible  absolute w-[100vw] h-[100vh] opacity-0 z-9999 bg-primary-blue text-nav-bg-hover p-10 lg:pr-30 lg:pl-30 duration-400 ease-in overflow-auto;
@@ -301,10 +252,10 @@ html, body {
             @apply flex flex-col md:flex-row justify-around items-center lg:flex-col  w-full h-full md:w-full md:h-1/3 lg:h-full lg:w-1/3 ;
 
             .home-popup__item__image {
-                @apply md:w-2/5 md:h-4/5 lg:w-4/5 lg:h-[30%] m-5 rounded-2xl overflow-hidden;
+                @apply md:w-2/5 md:h-4/5 lg:w-4/5 lg:h-2/5 m-5 rounded-2xl overflow-hidden;
 
                 img {
-                    @apply object-cover object-center w-full scale-[1.1] duration-400 ease-in;
+                    @apply object-cover object-center w-full h-full scale-[1.1] duration-400 ease-in;
 
                     &:hover {
                         scale: 1.0;
@@ -325,14 +276,123 @@ html, body {
                 }
             }
         }
-
-
     }
 
     .home-popup__active {
         visibility: visible;
+        position: fixed;
         transform: translate(0, 0);
         opacity: 1;
+    }
+
+    .home-content {
+        @apply w-[100vw] ;
+        .home-content__news {
+            @apply flex flex-col md:flex-row w-full mt-10 pr-5 pl-5;
+
+            .home-content__news__title {
+                @apply text-3xl md:text-5xl p-7 text-center;
+            }
+
+            .home-content__news__bigNews {
+                @apply flex-center-col self-start w-full md:w-1/2 p-5;
+            }
+
+            .home-content__news__smallNews {
+                @apply flex flex-wrap w-full md:w-1/2 p-5;
+
+                .newsCard {
+                    @apply w-1/2 p-5;
+                }
+            }
+
+        }
+
+        .home-content__location {
+            @apply flex flex-col md:flex-row w-full;
+        }
+
+        .home-content__culture {
+            @apply flex flex-col md:flex-row w-full;
+        }
+
+        .home-content__careers {
+            @apply flex flex-col md:flex-row w-full;
+
+        }
+    }
+
+
+
+
+}
+
+@layer components {
+
+    .mainImageOrVideo {
+        @apply w-full h-[100vh];
+
+        video, img  {
+            @apply w-[100%] h-full object-cover object-center;
+        }
+
+        img {
+            @apply w-[100%] h-full object-cover object-center;
+        }
+    }
+
+    .mainTitle {
+
+        @apply flex flex-col justify-start gap-7 absolute left-20 lg:left-40 text-nav-border text-7xl duration-400 ease-in-out;
+
+        h1 {
+            span {
+                @apply text-9xl text-orange-500
+            }
+        }
+
+        .title__item {
+            @apply flex  w-[60vw] cursor-pointer ;
+
+            .message {
+                @apply w-1/2 text-2xl text-end;
+            }
+
+            .link {
+                @apply flex flex-col justify-center items-start  w-1/2 ;
+
+                img {
+                    @apply h-[1.5rem] rotate-[-90deg];
+                }
+            }
+
+            &:hover {
+                img{
+                    @apply translate-x-15 duration-400 ease-in-out;
+                }
+            }
+        }
+
+        h1:hover {
+            @apply  duration-400 ease-in-out;
+        }
+
+        .passions-conflict-regular {
+            font-family: "Passions Conflict", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+    }
+
+    .simpleImage {
+        img {
+            @apply w-[100%] h-full object-cover object-center scale-[1] duration-400 ease-in-out;
+
+            &:hover {
+                @apply scale-[1.2];
+            }
+        }
     }
 }
 
