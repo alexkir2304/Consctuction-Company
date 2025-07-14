@@ -4,8 +4,10 @@ import MainImageOrVideo from "../Components/MainImageOrVideo.jsx";
 import MainTitle from "../Components/MainTitle.jsx";
 import SimpleImage from "../Components/SimpleImage.jsx";
 import NewsCard from "../Components/NewsCard.jsx";
-import {culture} from "../constants/index.js";
+import {cultureSlider} from "../constants/index.js";
 import SliderButton from "../Components/SliderButton.jsx";
+import PicturePlusText from "../Components/PicturePlusText.jsx";
+import Slider from "../Components/Slider.jsx";
 
 const Home = () => {
 
@@ -187,60 +189,27 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className='content-culture__slider'>
-                            <div className='content-culture__slider__controls'>
-                                {culture.map((item, index) => (
-                                    <SliderButton key={index} tableTitle={item.tableTitle}  tableNumber={item.tableNumber} setSliderIndex={setSliderIndex} sliderIndex={sliderIndex} />
-                                ))}
-                            </div>
-                            <div className='content-culture__slider__container'>
-                                <div className='content-culture__slider__container__choochooContainerxD'
-                                    style={{
-                                        left: `-${((sliderIndex - 1) * 100)}%`
-                                    }}
-                                >
-                                    {culture.map((item, index) => (
-                                        <div className={`flex absolute  w-full h-full overflow-hidden `}
-                                             key={index}
-                                             style={{
-                                                 left: `${(item.tableNumber - 1) * 100}%`
-                                             }}
-                                        >
-                                            <div className='flex flex-col items-start w-2/5 h-full p-5'>
-                                                <h1 className='text-[1.1rem] text-primary-dark-blue pb-5'>{item.sliderTitle}</h1>
-                                                <h1 className='text-2xl'>{item.sliderTitle2}</h1>
-                                                <p className='p-5'>{item.sliderText}</p>
-                                                <Link to={'/'}>Learn more <sub><span
-                                                    className='text-primary-dark-blue text-4xl ml-2 '>→</span></sub> </Link>
+                        <Slider sliderIndex={sliderIndex} setSliderIndex={setSliderIndex} rootArray={cultureSlider} />
 
-                                            </div>
-                                            <div className='flex-center-col w-3/5 h-full'>
-                                                <SimpleImage src={item.sliderImageUrl} alt=""/>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div className="content-careers">
 
-                        <div className='content-careers__wrapper1'>
-                            <div className="content-careers__image">
-                                <SimpleImage
-                                    src={'images/careers/041223-stock-089_1_thumb-blocks-left-view.jpg'}
-                                    alt=""/>
-                            </div>
+                        <PicturePlusText src={'images/careers/041223-stock-089_1_thumb-blocks-left-view.jpg'}
+                                         pictureLeft={true}
+                        >
+                            <p><span>Life At Turner</span></p>
+                            <h1>Ambitious People, Impactful Work</h1>
+                            <p>At Turner, you will work with people who share your passion for solving challenging
+                                problems and
+                                making a difference.</p>
+                            <Link to={'/careers'}>Explore a career with Turner <sub><span
+                                className='text-primary-dark-blue text-4xl ml-2 '>→</span></sub> </Link>
+                        </PicturePlusText>
 
-                            <div className="content-careers__title">
-                                <p><span>Life At Turner</span></p>
-                                <h1>Ambitious People, Impactful Work</h1>
-                                <p>At Turner, you will work with people who share your passion for solving challenging problems and making a difference.</p>
-                                <Link to={'/careers'}>Explore a career with Turner <sub><span
-                                    className='text-primary-dark-blue text-4xl ml-2 '>→</span></sub> </Link>
-                            </div>
-                        </div>
+
+
+
 
 
                     </div>

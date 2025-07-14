@@ -258,7 +258,7 @@ export const navigation = [
     }
 ]
 
-export const culture = [
+export const cultureSlider = [
     {
         tableTitle: 'ESG strategy',
         tableNumber: 1,
@@ -306,6 +306,67 @@ export const culture = [
         sliderTitle2: 'Safety and Wellness',
         sliderText: 'We promote an injury-free environment and the safest workplace possible for our employees, trade partners, clients, and project consultants.',
         sliderImageUrl: 'images/culture slider/041123-stock-292_thumb-slider-view.jpg'
+    },
+
+
+]
+
+export const aboutSlider = [
+    {
+        tableTitle: 'ESG',
+        tableNumber: 1,
+        sliderTitle: 'Our Culture',
+        sliderTitle2: 'Environmental, Social and Governance',
+        sliderText: 'We understand the environmental, social, and economic impact of our activities and that it is our responsibility to conduct our business in a transparent and ethical manner.',
+        sliderImageUrl: 'images/about/slider/05242023-stock-001_thumb-slider-view.jpeg'
+    },
+    {
+        tableTitle: 'Community',
+        tableNumber: 2,
+        sliderTitle: 'Our Culture',
+        sliderTitle2: 'Community & Citizenship',
+        sliderText: 'Our commitment to community and educational outreach is rooted in the belief that service is an essential part of good corporate citizenship.',
+        sliderImageUrl: 'images/about/slider/041123-stock-177_thumb-slider-view.jpg'
+    },
+    {
+        tableTitle: 'DE&I',
+        tableNumber: 3,
+        sliderTitle: 'DE&I',
+        sliderTitle2: 'Diversity, Equity, and Inclusion',
+        sliderText: 'We foster a culture of diversity and inclusion in which all employees contribute creative ideas, seek challenges and have the opportunity to grow.',
+        sliderImageUrl: 'images/about/slider/04262023-stock-003_thumb-slider-view.jpg'
+    },
+    {
+        tableTitle: 'Environmental',
+        tableNumber: 4,
+        sliderTitle: 'Environmental',
+        sliderTitle2: 'Environmental Sustainability and Resiliency',
+        sliderText: 'We conduct our business consiously and responsibly, creating a healthy, prosperous and sustainable future for people and the planet.',
+        sliderImageUrl: '/images/about/slider/3912-001_thumb-slider-view_1.jpg'
+    },
+    {
+        tableTitle: 'Innovation',
+        tableNumber: 5,
+        sliderTitle: 'Our Culture',
+        sliderTitle2: 'Innovation',
+        sliderText: 'We recognize the importance of innovation and fostering a culture of continuous improvement.',
+        sliderImageUrl: 'images/about/slider/04272023-stock-003_thumb-slider-view.jpg'
+    },
+    {
+        tableTitle: 'Leab',
+        tableNumber: 6,
+        sliderTitle: 'Our Culture',
+        sliderTitle2: 'Lean Construction',
+        sliderText: 'We embrace a Lean management approach and a culture that emphasizes collaboration, reliability of scheduling and delivering the most value while consuming the fewest resources.',
+        sliderImageUrl: 'images/about/slider/041223-stock-092_thumb-slider-view.jpg'
+    },
+    {
+        tableTitle: 'Safety',
+        tableNumber: 7,
+        sliderTitle: 'Our Culture',
+        sliderTitle2: 'Safety and Wellness',
+        sliderText: 'We promote an injury-free environment and the safest workplace possible for our employees, trade partners, clients, and project consultants.',
+        sliderImageUrl: 'images/about/slider/Turner-Holds-Annual-Safety-Stand-Down-May-8-2017_thumb-slider-view.jpg'
     },
 
 
