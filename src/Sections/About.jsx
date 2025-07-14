@@ -13,11 +13,11 @@ const About = () => {
 
     return (
         <div>
-            <header className='about'>
-                <div className='flex-center w-full relative'>
+            <div className='about'>
+                <header className='flex-center w-full relative'>
                     <MainImageOrVideo type={'image'} src={'/images/aboutImage.jpg'}/>
                     <MainTitle mainText={'Making a Difference in the Lives of'} mainTextOrange={'  Our People, Customers, and Community'}/>
-                </div>
+                </header>
 
 
                 <PicturePlusText
@@ -56,7 +56,7 @@ const About = () => {
                 </PicturePlusText>
 
                 <Slider sliderIndex={sliderIndex} setSliderIndex={setSliderIndex} rootArray={aboutSlider} />
-            </header>
+            </div>
         </div>
     );
 };

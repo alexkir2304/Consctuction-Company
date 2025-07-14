@@ -23,9 +23,9 @@ const Home = () => {
 
     return (
         <div>
-            <header className='home'>
+            <div className='home'>
 
-                <div className='flex-center w-full relative'>
+                <header className='flex-center w-full relative'>
                     <div className="home-popup">
                         <div onClick={() => {
 
@@ -106,7 +106,7 @@ const Home = () => {
                     <MainTitle mainText={'Making a'} mainTextOrange={' Difference'} handleClick={handleClick}>
                         <div className='message'>What do you want to build</div>
                     </MainTitle>
-                </div>
+                </header>
 
                 <div className="content">
                     <div id='news' className="content-news">
@@ -215,7 +215,7 @@ const Home = () => {
                     </div>
                 </div>
 
-            </header>
+            </div>
         </div>
     );
 };

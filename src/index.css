@@ -469,6 +469,21 @@ html, body {
     @apply flex-center-col w-full
 }
 
+.services {
+    @apply flex flex-col relative w-full ;
+
+
+
+    .content {
+        @apply flex flex-col  w-full ;
+
+
+        .mainTitles {
+            @apply flex flex-col  w-full h-full mt-20;
+        }
+    }
+}
+
 .footer {
     @apply flex flex-col w-full bg-primary-blue text-white mt-20 ;
 
@@ -476,13 +491,14 @@ html, body {
        @apply flex flex-col md:flex-row  w-full border-b-1 border-b-nav-border;
 
        .firstLine-item {
-           @apply flex justify-around items-center w-full md:w-1/2 p-5 border-r-1 border-r-nav-border first:w-full last:w-full md:first:w-1/4 md:last:w-1/4 last:border-r-0;
+           @apply flex flex-col gap-5 md:gap-0 md:flex-row justify-around items-center w-full md:w-1/2 p-5 border-r-1 border-r-nav-border first:w-full last:w-full md:first:w-1/4 md:last:w-1/4 last:border-r-0;
 
            .firstLine-item__logo {
                @apply flex-center w-[35vw] lg:w-[25vw] text-3xl md:text-5xl lg:text-6xl font-bold  box-border outline-none;
            }
 
            .firstLine-item__link {
+               @apply w-full md:w-1/5 text-center;
                &:hover {
                    @apply text-orange-500 duration-400 ease-in-out;
                }
