@@ -257,3 +257,56 @@ export const navigation = [
         ]
     }
 ]
+
+export const culture = [
+    {
+        tableTitle: 'ESG strategy',
+        tableNumber: 1,
+        sliderTitle: 'Environmental, Social, and Governance Strategy',
+        sliderTitle2: 'Building Today to Transform Tomorrow',
+        sliderText: 'We support a healthy and more equitable future for our people, our business, and our planet through our ESG strategy.',
+        sliderImageUrl: 'images/culture slider/pnbsite-drone_thumb-slider-view.jpg'
+    },
+    {
+        tableTitle: 'Community',
+        tableNumber: 2,
+        sliderTitle: 'Community',
+        sliderTitle2: 'Community & Citizenship',
+        sliderText: 'We make a difference in the community through our relationships, our partnerships, and our investments.',
+        sliderImageUrl: '/images/culture slider/041923-stock-005_thumb-slider-view (1).jpg'
+    },
+    {
+        tableTitle: 'DE&I',
+        tableNumber: 3,
+        sliderTitle: 'DE&I',
+        sliderTitle2: 'Diversity, Equity, and Inclusion',
+        sliderText: 'We are sustaining the right environment where people can be at their best, be authentic, and are treated with dignity and respect.  This includes working every day to eliminate hate and bias from our industry.',
+        sliderImageUrl: '/images/culture slider/041123-stock-299_1_thumb-slider-view.jpg'
+    },
+    {
+        tableTitle: 'Environmental',
+        tableNumber: 4,
+        sliderTitle: 'Environmental',
+        sliderTitle2: 'Environmental Sustainability and Resiliency',
+        sliderText: 'We conduct our business consiously and responsibly, creating a healthy, prosperous and sustainable future for people and the planet.',
+        sliderImageUrl: 'images/culture slider/041123-stock-136_thumb-slider-view.jpg'
+    },
+    {
+        tableTitle: 'Innovation',
+        tableNumber: 5,
+        sliderTitle: 'Innovation',
+        sliderTitle2: 'Innovation',
+        sliderText: 'We are pioneering advancements that will reinvent how we work, improve people\'s lives, and shape the future of the industry.',
+        sliderImageUrl: 'images/culture slider/041123-stock-239_1_thumb-slider-view.jpg'
+    },
+    {
+        tableTitle: 'Safety',
+        tableNumber: 6,
+        sliderTitle: 'Safety',
+        sliderTitle2: 'Safety and Wellness',
+        sliderText: 'We promote an injury-free environment and the safest workplace possible for our employees, trade partners, clients, and project consultants.',
+        sliderImageUrl: 'images/culture slider/041123-stock-292_thumb-slider-view.jpg'
+    },
+
+
+]

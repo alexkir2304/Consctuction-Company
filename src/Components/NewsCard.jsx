@@ -5,7 +5,7 @@ import {Link} from "react-router";
 const NewsCard = ({src, children}) => {
     return (
         <div className='newsCard'>
-            <div>
+            <div className='h-[60%]'>
                 <SimpleImage src={src}/>
             </div>
 
