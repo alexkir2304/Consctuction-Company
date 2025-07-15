@@ -1,10 +1,50 @@
 import React from 'react';
+import {Link, Outlet, useParams} from "react-router";
+import {projects} from "../constants/index.js";
+import MainImageOrVideo from "../Components/MainImageOrVideo.jsx";
+import MainTitle from "../Components/MainTitle.jsx";
+import SimpleImage from "../Components/SimpleImage.jsx";
 
 const Projects = () => {
+
     return (
+
         <div>
-            Projects
+
+            <div className="projects">
+                <header className='header flex-center w-full relative'>
+                    <div className="header-image">
+                        <MainImageOrVideo type={'image'}
+                                          src={'/images/projects/Lester-Community-Center-1_thumb-projects-featured-header.jpg'}/>
+                    </div>
+
+                    <MainTitle mainTextOrange={'What Matters'} mainText={'Delivering On'}/>
+                </header>
+
+                <div className="projectsList">
+                    {projects.map((item, index) => (
+                        <div className="projectCard" key={index}>
+                            <SimpleImage src={item.data.mainImage}/>
+                            <span>{item.data.location}</span>
+                            <Link to={`/projects/${item.id}`}>{item.title}</Link>
+                        </div>
+                    ))}
+                </div>
+
+            </div>
+
+
+            {/*<div className="flex-center-col mt-60 ml-30 gap-5">*/}
+            {/*    {projects.map((project) => (*/}
+            {/*        <li key={project.id}>*/}
+            {/*            <Link to={`/projects/${project.id}`}>{project.fullName}</Link>*/}
+            {/*        </li>*/}
+            {/*    ))}*/}
+            {/*</div>*/}
+
+            {/*<Outlet/>*/}
         </div>
+
     );
 };
 

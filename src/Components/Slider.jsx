@@ -29,8 +29,13 @@ const Slider = ({sliderIndex, setSliderIndex, rootArray}) => {
                                 <h1 className='text-[1.1rem] text-primary-dark-blue pb-5'>{item.sliderTitle}</h1>
                                 <h1 className='text-2xl'>{item.sliderTitle2}</h1>
                                 <p className='p-5'>{item.sliderText}</p>
-                                <Link to={'/'}>Learn more <sub><span
-                                    className='text-primary-dark-blue text-4xl ml-2 '>→</span></sub> </Link>
+
+                                {
+                                    item.sliderText &&
+                                    <Link to={'/'}>Learn more <sub><span
+                                        className='text-primary-dark-blue text-4xl ml-2 '>→</span></sub> </Link>
+                                }
+
 
                             </div>
                             <div className='flex-center-col w-3/5 h-full'>

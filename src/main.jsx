@@ -28,9 +28,7 @@ createRoot(document.getElementById('root')).render(
                     <Route path="services" element={<Services/>}/>
                     <Route path="projects" >
                         <Route index element={<Projects/>}/>
-                        <Route element={<ProjectLayout/>}>
-                            <Route path=':projectId' element={<Project/>}/>
-                        </Route>
+                        <Route path=':projectId' element={<Project/>}/>
                     </Route>
                     <Route path="careers" element={<Careers/>}/>
                     <Route path="subcontractors" element={<Subcontractors/>}/>

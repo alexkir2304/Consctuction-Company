@@ -14,7 +14,7 @@ const About = () => {
     return (
         <div>
             <div className='about'>
-                <header className='flex-center w-full relative'>
+                <header>
                     <MainImageOrVideo type={'image'} src={'/images/aboutImage.jpg'}/>
                     <MainTitle mainText={'Making a Difference in the Lives of'} mainTextOrange={'  Our People, Customers, and Community'}/>
                 </header>

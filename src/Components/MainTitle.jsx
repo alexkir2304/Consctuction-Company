@@ -8,10 +8,13 @@ const MainTitle = ({mainText, mainTextOrange, handleClick, children }) => {
                 {mainText}<span className='passions-conflict-regular'>{mainTextOrange}</span>
             </h1>
 
-            {handleClick && <div onClick={() => handleClick()} className="title__item">
-                {children}
-                <div className='link'><img src="/orange-arrow.svg" alt=""/></div>
-            </div>}
+            {
+                handleClick &&
+                <div onClick={() => handleClick()} className="title__item">
+                    {children}
+                    <div className='link'><img src="/orange-arrow.svg" alt=""/></div>
+                </div>
+            }
 
 
         </div>

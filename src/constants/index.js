@@ -371,3 +371,91 @@ export const aboutSlider = [
 
 
 ]
+
+
+
+
+export const projects = [
+    {
+        id: 1,
+        title: 'Maryland Public Health Laboratory',
+        data: {
+            mainImage: '/images/projects/project1/mainImage.jpg',
+            location: 'Baltimore, Maryland',
+            mainTitle: 'Cutting-Edge Laboratory Facility',
+            mainText: 'Located in The Science + Technology Park on Johns Hopkins’ East Baltimore Campus, this building features open and closed laboratories, central accessioning areas, BSL-3 containment areas, an animal rabies lab, auditorium, offices, and training areas.',
+            picturePlusTextData: {
+                imageUrl: '/images/projects/project1/MD-LabAdmin-0016_thumb-blocks-right-view.jpg',
+                textContent: 'The new laboratory enhances the State of Maryland’s ability to identify and respond to current and emerging public health crises as its employees conduct over 10 million tests annually and works in tandem with the surrounding facilities to maintain the health of the residents of Baltimore and Maryland as a whole. Turner and its associate partners, Cain Construction and Essex Construction, surpassed the contract goals for Workforce Development, minority and women-owned business enterprises, and local business enterprises.'
+            },
+            galleryArrayForSlider: [
+                {
+                    tableTitle: '',
+                    tableNumber: 1,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 2,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                },{
+                    tableTitle: '',
+                    tableNumber: 3,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                },
+            ]
+        }
+    },
+
+    {
+        id: 2,
+        title: 'Maryland Public Health Laboratory',
+        data: {
+            mainImage: '/images/projects/project1/mainImage.jpg',
+            location: 'Baltimore, Maryland',
+            mainTitle: 'Cutting-Edge Laboratory Facility',
+            mainText: 'Located in The Science + Technology Park on Johns Hopkins’ East Baltimore Campus, this building features open and closed laboratories, central accessioning areas, BSL-3 containment areas, an animal rabies lab, auditorium, offices, and training areas.',
+            picturePlusTextData: {
+                imageUrl: 'public/images/projects/project1/MD-LabAdmin-0016_thumb-blocks-right-view.jpg',
+                textContent: 'The new laboratory enhances the State of Maryland’s ability to identify and respond to current and emerging public health crises as its employees conduct over 10 million tests annually and works in tandem with the surrounding facilities to maintain the health of the residents of Baltimore and Maryland as a whole. Turner and its associate partners, Cain Construction and Essex Construction, surpassed the contract goals for Workforce Development, minority and women-owned business enterprises, and local business enterprises.'
+            },
+            galleryArrayForSlider: [
+                {
+                    tableTitle: '',
+                    tableNumber: 1,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 2,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                },{
+                    tableTitle: '',
+                    tableNumber: 3,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                },
+            ]
+        }
+    },
+
+
+
+];
