@@ -403,21 +403,106 @@ export const projects = [
                     sliderTitle: '',
                     sliderTitle2: '',
                     sliderText: '',
-                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                    sliderImageUrl: '/images/projects/project1/slider/4332-002_thumb-blocks-gallery-list.jpg'
                 },{
                     tableTitle: '',
                     tableNumber: 3,
                     sliderTitle: '',
                     sliderTitle2: '',
                     sliderText: '',
-                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                    sliderImageUrl: '/images/projects/project1/slider/4332-003_thumb-blocks-gallery-list.jpg'
                 },
-            ]
+                {
+                    tableTitle: '',
+                    tableNumber: 4,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-005_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 5,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-006_thumb-blocks-gallery-list.jpg'
+                },
+            ],
+            businessUnit: 'Tampa',
+            yearComplited: '2024',
+            clients: 'Orlando Health inc',
+            clientIndustry: 'Health',
+            scopeOfWork: 'New construction',
+            size: '123000 sq. ft.',
+            partners: 'HDR architects',
+            services: 'construction management'
         }
     },
 
     {
         id: 2,
+        title: 'Bayfront Health Medical Pavilion at Institute Square',
+        data: {
+            mainImage: '/images/projects/rest projects/73712-001_thumb-projects-basic-landscape.jpeg',
+            location: 'St. Petersburg, Florida',
+            mainTitle: 'Building a Healthy Future Together',
+            mainText: 'The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics.',
+
+            galleryArrayForSlider: [
+                {
+                    tableTitle: '',
+                    tableNumber: 1,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 2,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-002_thumb-blocks-gallery-list.jpg'
+                },{
+                    tableTitle: '',
+                    tableNumber: 3,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-003_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 4,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-005_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 5,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-006_thumb-blocks-gallery-list.jpg'
+                },
+            ],
+            businessUnit: 'Tampa',
+            yearComplited: '2024',
+            clients: 'Orlando Health inc',
+            clientIndustry: 'Health',
+            scopeOfWork: 'New construction',
+            size: '123000 sq. ft.',
+            partners: 'HDR architects',
+            services: 'construction management'
+        }
+    },
+
+    {
+        id: 1,
         title: 'Maryland Public Health Laboratory',
         data: {
             mainImage: '/images/projects/project1/mainImage.jpg',
@@ -425,7 +510,7 @@ export const projects = [
             mainTitle: 'Cutting-Edge Laboratory Facility',
             mainText: 'Located in The Science + Technology Park on Johns Hopkins’ East Baltimore Campus, this building features open and closed laboratories, central accessioning areas, BSL-3 containment areas, an animal rabies lab, auditorium, offices, and training areas.',
             picturePlusTextData: {
-                imageUrl: 'public/images/projects/project1/MD-LabAdmin-0016_thumb-blocks-right-view.jpg',
+                imageUrl: '/images/projects/project1/MD-LabAdmin-0016_thumb-blocks-right-view.jpg',
                 textContent: 'The new laboratory enhances the State of Maryland’s ability to identify and respond to current and emerging public health crises as its employees conduct over 10 million tests annually and works in tandem with the surrounding facilities to maintain the health of the residents of Baltimore and Maryland as a whole. Turner and its associate partners, Cain Construction and Essex Construction, surpassed the contract goals for Workforce Development, minority and women-owned business enterprises, and local business enterprises.'
             },
             galleryArrayForSlider: [
@@ -443,18 +528,355 @@ export const projects = [
                     sliderTitle: '',
                     sliderTitle2: '',
                     sliderText: '',
-                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                    sliderImageUrl: '/images/projects/project1/slider/4332-002_thumb-blocks-gallery-list.jpg'
                 },{
                     tableTitle: '',
                     tableNumber: 3,
                     sliderTitle: '',
                     sliderTitle2: '',
                     sliderText: '',
-                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                    sliderImageUrl: '/images/projects/project1/slider/4332-003_thumb-blocks-gallery-list.jpg'
                 },
-            ]
+                {
+                    tableTitle: '',
+                    tableNumber: 4,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-005_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 5,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-006_thumb-blocks-gallery-list.jpg'
+                },
+            ],
+            businessUnit: 'Tampa',
+            yearComplited: '2024',
+            clients: 'Orlando Health inc',
+            clientIndustry: 'Health',
+            scopeOfWork: 'New construction',
+            size: '123000 sq. ft.',
+            partners: 'HDR architects',
+            services: 'construction management'
         }
     },
+
+    {
+        id: 2,
+        title: 'Bayfront Health Medical Pavilion at Institute Square',
+        data: {
+            mainImage: '/images/projects/rest projects/73712-001_thumb-projects-basic-landscape.jpeg',
+            location: 'St. Petersburg, Florida',
+            mainTitle: 'Building a Healthy Future Together',
+            mainText: 'The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics.',
+
+            galleryArrayForSlider: [
+                {
+                    tableTitle: '',
+                    tableNumber: 1,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 2,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-002_thumb-blocks-gallery-list.jpg'
+                },{
+                    tableTitle: '',
+                    tableNumber: 3,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-003_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 4,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-005_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 5,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-006_thumb-blocks-gallery-list.jpg'
+                },
+            ],
+            businessUnit: 'Tampa',
+            yearComplited: '2024',
+            clients: 'Orlando Health inc',
+            clientIndustry: 'Health',
+            scopeOfWork: 'New construction',
+            size: '123000 sq. ft.',
+            partners: 'HDR architects',
+            services: 'construction management'
+        }
+    },
+
+    {
+        id: 1,
+        title: 'Maryland Public Health Laboratory',
+        data: {
+            mainImage: '/images/projects/project1/mainImage.jpg',
+            location: 'Baltimore, Maryland',
+            mainTitle: 'Cutting-Edge Laboratory Facility',
+            mainText: 'Located in The Science + Technology Park on Johns Hopkins’ East Baltimore Campus, this building features open and closed laboratories, central accessioning areas, BSL-3 containment areas, an animal rabies lab, auditorium, offices, and training areas.',
+            picturePlusTextData: {
+                imageUrl: '/images/projects/project1/MD-LabAdmin-0016_thumb-blocks-right-view.jpg',
+                textContent: 'The new laboratory enhances the State of Maryland’s ability to identify and respond to current and emerging public health crises as its employees conduct over 10 million tests annually and works in tandem with the surrounding facilities to maintain the health of the residents of Baltimore and Maryland as a whole. Turner and its associate partners, Cain Construction and Essex Construction, surpassed the contract goals for Workforce Development, minority and women-owned business enterprises, and local business enterprises.'
+            },
+            galleryArrayForSlider: [
+                {
+                    tableTitle: '',
+                    tableNumber: 1,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 2,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-002_thumb-blocks-gallery-list.jpg'
+                },{
+                    tableTitle: '',
+                    tableNumber: 3,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-003_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 4,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-005_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 5,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-006_thumb-blocks-gallery-list.jpg'
+                },
+            ],
+            businessUnit: 'Tampa',
+            yearComplited: '2024',
+            clients: 'Orlando Health inc',
+            clientIndustry: 'Health',
+            scopeOfWork: 'New construction',
+            size: '123000 sq. ft.',
+            partners: 'HDR architects',
+            services: 'construction management'
+        }
+    },
+
+    {
+        id: 2,
+        title: 'Bayfront Health Medical Pavilion at Institute Square',
+        data: {
+            mainImage: '/images/projects/rest projects/73712-001_thumb-projects-basic-landscape.jpeg',
+            location: 'St. Petersburg, Florida',
+            mainTitle: 'Building a Healthy Future Together',
+            mainText: 'The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics.',
+
+            galleryArrayForSlider: [
+                {
+                    tableTitle: '',
+                    tableNumber: 1,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 2,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-002_thumb-blocks-gallery-list.jpg'
+                },{
+                    tableTitle: '',
+                    tableNumber: 3,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-003_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 4,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-005_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 5,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-006_thumb-blocks-gallery-list.jpg'
+                },
+            ],
+            businessUnit: 'Tampa',
+            yearComplited: '2024',
+            clients: 'Orlando Health inc',
+            clientIndustry: 'Health',
+            scopeOfWork: 'New construction',
+            size: '123000 sq. ft.',
+            partners: 'HDR architects',
+            services: 'construction management'
+        }
+    },
+
+    {
+        id: 1,
+        title: 'Maryland Public Health Laboratory',
+        data: {
+            mainImage: '/images/projects/project1/mainImage.jpg',
+            location: 'Baltimore, Maryland',
+            mainTitle: 'Cutting-Edge Laboratory Facility',
+            mainText: 'Located in The Science + Technology Park on Johns Hopkins’ East Baltimore Campus, this building features open and closed laboratories, central accessioning areas, BSL-3 containment areas, an animal rabies lab, auditorium, offices, and training areas.',
+            picturePlusTextData: {
+                imageUrl: '/images/projects/project1/MD-LabAdmin-0016_thumb-blocks-right-view.jpg',
+                textContent: 'The new laboratory enhances the State of Maryland’s ability to identify and respond to current and emerging public health crises as its employees conduct over 10 million tests annually and works in tandem with the surrounding facilities to maintain the health of the residents of Baltimore and Maryland as a whole. Turner and its associate partners, Cain Construction and Essex Construction, surpassed the contract goals for Workforce Development, minority and women-owned business enterprises, and local business enterprises.'
+            },
+            galleryArrayForSlider: [
+                {
+                    tableTitle: '',
+                    tableNumber: 1,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 2,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-002_thumb-blocks-gallery-list.jpg'
+                },{
+                    tableTitle: '',
+                    tableNumber: 3,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-003_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 4,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-005_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 5,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-006_thumb-blocks-gallery-list.jpg'
+                },
+            ],
+            businessUnit: 'Tampa',
+            yearComplited: '2024',
+            clients: 'Orlando Health inc',
+            clientIndustry: 'Health',
+            scopeOfWork: 'New construction',
+            size: '123000 sq. ft.',
+            partners: 'HDR architects',
+            services: 'construction management'
+        }
+    },
+
+    {
+        id: 2,
+        title: 'Bayfront Health Medical Pavilion at Institute Square',
+        data: {
+            mainImage: '/images/projects/rest projects/73712-001_thumb-projects-basic-landscape.jpeg',
+            location: 'St. Petersburg, Florida',
+            mainTitle: 'Building a Healthy Future Together',
+            mainText: 'The Orlando Health Bayfront Medical Pavilion project consists of a new medical office facility to provide multidisciplinary state of the art outpatient services. The project includes a 123,000 SF multi-tenant facility which will include three external partners offering Radiation Oncology, Medical Oncology Clinics, Oncology Research, Orthopedic Clinics, Orlando Health Imaging Center, OH/BHSP Lab, and other specialty clinics.',
+
+            galleryArrayForSlider: [
+                {
+                    tableTitle: '',
+                    tableNumber: 1,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-008_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 2,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-002_thumb-blocks-gallery-list.jpg'
+                },{
+                    tableTitle: '',
+                    tableNumber: 3,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-003_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 4,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-005_thumb-blocks-gallery-list.jpg'
+                },
+                {
+                    tableTitle: '',
+                    tableNumber: 5,
+                    sliderTitle: '',
+                    sliderTitle2: '',
+                    sliderText: '',
+                    sliderImageUrl: '/images/projects/project1/slider/4332-006_thumb-blocks-gallery-list.jpg'
+                },
+            ],
+            businessUnit: 'Tampa',
+            yearComplited: '2024',
+            clients: 'Orlando Health inc',
+            clientIndustry: 'Health',
+            scopeOfWork: 'New construction',
+            size: '123000 sq. ft.',
+            partners: 'HDR architects',
+            services: 'construction management'
+        }
+    },
+
+
 
 
 

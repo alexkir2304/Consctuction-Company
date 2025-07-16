@@ -24,7 +24,10 @@ const Projects = () => {
                 <div className="projectsList">
                     {projects.map((item, index) => (
                         <div className="projectCard" key={index}>
-                            <SimpleImage src={item.data.mainImage}/>
+                            <div className="h-60%">
+                                <SimpleImage src={item.data.mainImage}/>
+                            </div>
+
                             <span>{item.data.location}</span>
                             <Link to={`/projects/${item.id}`}>{item.title}</Link>
                         </div>

@@ -7,6 +7,9 @@ import MainProjectsBar from "../Components/MainProjectsBar.jsx";
 import PicturePlusText from "../Components/PicturePlusText.jsx";
 import Slider from "../Components/Slider.jsx";
 
+//i'm not going to create 1 million projects with 10 millions images for a pet-website.
+//here are some example projects just to demonstrate some of my skills.
+
 const Project = () => {
 
     const [sliderIndex, setSliderIndex] = useState(1);
@@ -30,7 +33,62 @@ const Project = () => {
                                           src={result[0].data.mainImage}/>
                     </div>
 
-                    <MainProjectsBar location={result[0].data.location} maintext={result[0].data.mainTitle}/>
+                    <MainProjectsBar location={result[0].data.location}
+                                     maintext={result[0].data.mainTitle}
+                                     handleClick={() => {
+                                         const el =  document.getElementsByClassName('popup')
+                                         el[0].classList.toggle('active');
+                                     }}
+                    />
+
+                    <div className="popup">
+                        <div className="popup-item">
+                            <div className="flex-center ml-10">
+                                PROJECT OVERVIEW
+                            </div>
+
+                            <button onClick={() => {
+                                const el =  document.getElementsByClassName('popup')
+                                el[0].classList.remove('active');
+                            }}>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div className="popup-item">
+                            <div>Business Unit(s)</div>
+                            <div>{result[0].data.businessUnit}</div>
+                        </div>
+                        <div className="popup-item">
+                            <div>Business Unit(s)</div>
+                            <div>{result[0].data.yearComplited}</div>
+                        </div>
+                        <div className="popup-item">
+                            <div>Business Unit(s)</div>
+                            <div>{result[0].data.clients}</div>
+                        </div>
+                        <div className="popup-item">
+                            <div>Business Unit(s)</div>
+                            <div>{result[0].data.clientIndustry}</div>
+                        </div>
+                        <div className="popup-item">
+                            <div>Business Unit(s)</div>
+                            <div>{result[0].data.scopeOfWork}</div>
+                        </div>
+                        <div className="popup-item">
+                            <div>Business Unit(s)</div>
+                            <div>{result[0].data.size}</div>
+                        </div>
+                        <div className="popup-item">
+                            <div>Business Unit(s)</div>
+                            <div>{result[0].data.partners}</div>
+                        </div>
+                        <div className="popup-item">
+                            <div>Business Unit(s)</div>
+                            <div>{result[0].data.services}</div>
+                        </div>
+
+                    </div>
                 </header>
 
                 <div id='content' className="content">
@@ -40,9 +98,13 @@ const Project = () => {
                     </div>
 
                     <div className="text">
-                        <PicturePlusText src={result[0].data.picturePlusTextData.imageUrl}>
-                            <p>{result[0].data.picturePlusTextData.textContent}</p>
-                        </PicturePlusText>
+
+                        {result[0].data.picturePlusTextData &&
+                            <PicturePlusText src={result[0].data.picturePlusTextData.imageUrl}>
+                                <p>{result[0].data.picturePlusTextData.textContent}</p>
+                            </PicturePlusText>
+                        }
+
                     </div>
 
                     <div className="gallery">

@@ -6,7 +6,7 @@ import SimpleImage from "./SimpleImage.jsx";
 const Slider = ({sliderIndex, setSliderIndex, rootArray}) => {
     return (
         <div className='slider'>
-            <div className='slider__controls'>
+            <div className='slider__controls '>
                 {rootArray.map((item, index) => (
                     <SliderButton key={index} tableTitle={item.tableTitle} tableNumber={item.tableNumber}
                                   setSliderIndex={setSliderIndex} sliderIndex={sliderIndex}/>

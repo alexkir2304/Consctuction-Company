@@ -454,7 +454,7 @@ html, body {
                         @apply border-1 border-home-border w-1/2 p-7 text-center;
 
                         &:first-child {
-                            @apply border-r-0;
+                            @apply border-r-0 border-nav-bg-hover;
                         }
                     }
 
@@ -470,6 +470,8 @@ html, body {
 
     header {
         @apply flex-center w-full relative;
+
+
     }
 }
 
@@ -568,11 +570,11 @@ html, body {
             @apply flex flex-col justify-around items-start gap-5 w-full md:w-1/4 p-5;
 
             span {
-                @apply text-primary-dark-blue text-[1.2rem];
+                @apply text-primary-dark-blue text-[1.2rem] h-[20%];
             }
 
             a {
-                @apply text-3xl text-gray-700;
+                @apply text-2xl text-gray-700 h-[20%];
             }
         }
     }
@@ -584,6 +586,37 @@ html, body {
     header {
         @apply flex-center w-full relative;
 
+        .popup {
+            @apply flex flex-wrap absolute right-[-80%] md:right-[-40%] w-[80%] md:w-[40%] h-[100vh] bg-primary-dark-blue text-nav-bg-hover z-8888 duration-400 ease-in-out ;
+
+            &.active {
+                @apply right-0;
+            }
+            .popup-item {
+                @apply flex-center-col gap-5 w-full md:w-1/2 h-[11.%] md:h-[23%] border-b-1  border-[#838dcf] ;
+
+                &:nth-child(even) {
+                    @apply border-r-1;
+                }
+
+                button {
+                    @apply flex-center relative w-[5rem] h-full border-l-1 border-[#838dcf]  cursor-pointer z-9999 ;
+                    span {
+                        &:first-child {
+                            @apply w-full h-[1px] bg-white rotate-45 absolute top-[50%] ;
+                        }
+                        &:last-child {
+                            @apply  w-full h-[1px] bg-white rotate-[-45deg] absolute top-[50%] ;
+                        }
+                    }
+                }
+
+                &:first-child {
+                    @apply flex-row md:w-full h-[10%] justify-between;
+                }
+            }
+        }
+
         .header-image {
             @apply w-full h-full;
         }
@@ -591,6 +624,10 @@ html, body {
 
     .content {
         @apply w-full;
+
+        .gallery {
+            @apply h-[75vh] md:h-[55vh]
+        }
 
         .title {
             @apply flex flex-center-col gap-7 w-full p-15;
@@ -605,6 +642,33 @@ html, body {
         }
     }
 
+}
+
+.careers {
+    @apply flex-center-col w-full;
+
+    header {
+        @apply flex-center w-full relative;
+
+        img {
+            @apply brightness-60;
+        }
+
+
+
+    }
+
+    .title {
+         @apply flex flex-center-col gap-7 w-full p-15;
+
+         h1 {
+             @apply text-4xl md:text-6xl text-gray-700;
+         }
+
+         p {
+             @apply text-[1.2rem] text-gray-700;
+         }
+     }
 }
 
 .footer {
@@ -652,14 +716,16 @@ html, body {
 @layer components {
 
     .slider {
-        @apply flex flex-col gap-5 md:gap-0 md:flex-row w-full mt-10 p-10;
+        @apply flex flex-col gap-5 md:gap-0 md:flex-row w-full h-full mt-10 p-10;
 
         .slider__controls {
-            @apply flex flex-col gap-4  md:gap-7 w-full md:w-1/5 z-99 bg-primary-dark-blue text-white rounded-[0.5rem] pt-5 pb-5 md:pt-15 md:pb-15;
+            @apply flex flex-col gap-4  md:gap-7 w-full md:w-1/4 xl:w-1/5 z-99 bg-primary-dark-blue text-[0.9rem] md:text-[1rem]  lg:text-[1.2rem] xl:text-[1.4rem] text-white rounded-[0.5rem] pt-5 pb-5 md:pt-15 md:pb-15;
+
+
         }
 
         .slider__container {
-            @apply relative w-full h-[60vh] md:h-auto md:w-4/5 overflow-hidden ;
+            @apply relative w-full h-[60vh] md:h-auto  md:w-3/4 xl:w-4/5 overflow-hidden ;
 
             .slider__container__choochooContainerxD {
                 @apply inline-block relative w-full h-full duration-800 ease-in-out;
