@@ -6,7 +6,7 @@ import Footer from "./Sections/Footer.jsx";
 
 const App = () => {
     return (
-        <div className=''>
+        <div >
 
             <Outlet/>
 

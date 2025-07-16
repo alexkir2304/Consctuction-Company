@@ -32,9 +32,9 @@ createRoot(document.getElementById('root')).render(
                     </Route>
                     <Route path="careers" element={<Careers/>}/>
                     <Route path="subcontractors" element={<Subcontractors/>}/>
-                    <Route path="*" element={<NoMatch/>}/>
-                </Route>
 
+                </Route>
+                <Route path="*" element={<NoMatch/>}/>
             </Route>
         </Routes>
     </BrowserRouter>

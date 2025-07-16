@@ -37,7 +37,7 @@ const Nav = () => {
 
     return (
 
-        <>
+        <div>
             <div className='navbar'>
                 <Link to={'/home'} className='navbar-logo '>
                     <h1>
@@ -82,23 +82,55 @@ const Nav = () => {
                 </div>
 
                 <div className='navbar-sideLinks '>
-                    <button className='navbar-sideLinks__item w-1/3'> Contact us</button>
+                    <button onClick={() => {
+                        const el = document.getElementsByClassName('popup')[0];
+                        el.classList.add('active');
+
+                    }} className='navbar-sideLinks__item w-1/3'> Contact us</button>
                     <Link to={'/subcontractors'} className='navbar-sideLinks__item w-2/3'>Become a subcontractor</Link>
+                </div>
+
+                <div className="popup ">
+                    <div className="popup-item">
+                        <div className="flex-center ml-10">
+                            CONTACTS
+                        </div>
+
+                        <button onClick={() => {
+                            const el = document.getElementsByClassName('popup')
+                            el[0].classList.remove('active');
+                        }}>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div className="popup-item">
+                        <div>Phone</div>
+                        <div>+111123456789</div>
+                    </div>
+                    <div className="popup-item">
+                        <div>EMAIL</div>
+                        <div>iLoveCreatingPetProjects@ gmail.com</div>
+                    </div>
+                    <div className="popup-item">
+                        <div>Address</div>
+                        <div>White house, Washington DC</div>
+                    </div>
+                    <div className="popup-item">
+                        <div>Address #2</div>
+                        <div>Kremlin, Moscow</div>
+                    </div>
                 </div>
             </div>
 
             <div className="navbarMobile">
 
-                <div className="navbarMobile-sidelineLeft">
-
-                </div>
+                <div className="navbarMobile-sidelineLeft"></div>
 
                 <div className="navbarMobile-menu">
                     <div className="navbarMobile-menu__button">
                         <button onClick={() => {
                             const el = document.getElementsByClassName('navbarMobile')[0];
-                            console.log(el)
-                            // el.style.visibility = 'hidden';
                             el.classList.remove('navbarMobile-active');
                         }}>
 
@@ -132,7 +164,8 @@ const Nav = () => {
                                     }
 
                                 }} className="navbarMobile-menu__item__btn">
-                                    <img onClick={(e) => e.target = e.target.parentNode} src="/orange-arrow.svg" alt=""/>
+                                    <img onClick={(e) => e.target = e.target.parentNode} src="/orange-arrow.svg"
+                                         alt=""/>
                                 </button>
                             </div>
 
@@ -155,13 +188,27 @@ const Nav = () => {
                                 ))}
                             </div>
                         </div>
+
+
                     ))}
+
+                    <button onClick={() => {
+                        const el = document.getElementsByClassName('popup')[0];
+                        const el2 = document.getElementsByClassName('navbarMobile')[0];
+
+                        el.classList.add('active');
+                        el2.classList.remove('navbarMobile-active');
+
+                    }} className='navbar-sideLinks__item w-full h-[20%] text-3xl cursor-pointer hover:text-primary-dark-blue'> Contact us
+                    </button>
                 </div>
                 <div className="navbarMobile-sidelineLeft">
 
                 </div>
             </div>
-        </>
+
+
+        </div>
 
     );
 };

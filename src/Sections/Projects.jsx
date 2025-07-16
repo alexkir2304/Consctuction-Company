@@ -12,7 +12,7 @@ const Projects = () => {
         <div>
 
             <div className="projects">
-                <header className='header flex-center w-full relative'>
+                <header>
                     <div className="header-image">
                         <MainImageOrVideo type={'image'}
                                           src={'/images/projects/Lester-Community-Center-1_thumb-projects-featured-header.jpg'}/>
@@ -24,12 +24,15 @@ const Projects = () => {
                 <div className="projectsList">
                     {projects.map((item, index) => (
                         <div className="projectCard" key={index}>
-                            <div className="h-60%">
+                            <div className="h-3/5">
                                 <SimpleImage src={item.data.mainImage}/>
                             </div>
 
-                            <span>{item.data.location}</span>
-                            <Link to={`/projects/${item.id}`}>{item.title}</Link>
+                            <div className=" flex flex-col h-2/5">
+                                <span>{item.data.location}</span>
+                                <Link to={`/projects/${item.id}`}>{item.title}</Link>
+                            </div>
+
                         </div>
                     ))}
                 </div>
