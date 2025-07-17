@@ -4,6 +4,7 @@ import PicturePlusText from "../Components/PicturePlusText.jsx";
 import MainImageOrVideo from "../Components/MainImageOrVideo.jsx";
 import MainTitle from "../Components/MainTitle.jsx";
 import SimpleImage from "../Components/SimpleImage.jsx";
+import Footer from "./Footer.jsx";
 
 const Services = () => {
     return (
@@ -116,6 +117,7 @@ const Services = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
 
     );

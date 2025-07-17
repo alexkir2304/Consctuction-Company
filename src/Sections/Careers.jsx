@@ -3,6 +3,7 @@ import MainImageOrVideo from "../Components/MainImageOrVideo.jsx";
 import MainTitle from "../Components/MainTitle.jsx";
 import SimpleImage from "../Components/SimpleImage.jsx";
 import {Link} from "react-router";
+import Footer from "./Footer.jsx";
 
 const Careers = () => {
     return (
@@ -82,6 +83,7 @@ const Careers = () => {
 
 
             </div>
+            <Footer/>
         </div>
     );
 };

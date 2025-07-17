@@ -502,7 +502,7 @@ export const projects = [
     },
 
     {
-        id: 1,
+        id: 3,
         title: 'Maryland Public Health Laboratory',
         data: {
             mainImage: '/images/projects/project1/mainImage.jpg',
@@ -566,7 +566,7 @@ export const projects = [
     },
 
     {
-        id: 2,
+        id: 4,
         title: 'Bayfront Health Medical Pavilion at Institute Square',
         data: {
             mainImage: '/images/projects/rest projects/73712-001_thumb-projects-basic-landscape.jpeg',
@@ -627,7 +627,7 @@ export const projects = [
     },
 
     {
-        id: 1,
+        id: 5,
         title: 'Maryland Public Health Laboratory',
         data: {
             mainImage: '/images/projects/project1/mainImage.jpg',
@@ -691,7 +691,7 @@ export const projects = [
     },
 
     {
-        id: 2,
+        id: 6,
         title: 'Bayfront Health Medical Pavilion at Institute Square',
         data: {
             mainImage: '/images/projects/rest projects/73712-001_thumb-projects-basic-landscape.jpeg',
@@ -752,7 +752,7 @@ export const projects = [
     },
 
     {
-        id: 1,
+        id: 7,
         title: 'Maryland Public Health Laboratory',
         data: {
             mainImage: '/images/projects/project1/mainImage.jpg',
@@ -816,7 +816,7 @@ export const projects = [
     },
 
     {
-        id: 2,
+        id: 8,
         title: 'Bayfront Health Medical Pavilion at Institute Square',
         data: {
             mainImage: '/images/projects/rest projects/73712-001_thumb-projects-basic-landscape.jpeg',
@@ -875,9 +875,4 @@ export const projects = [
             services: 'construction management'
         }
     },
-
-
-
-
-
 ];

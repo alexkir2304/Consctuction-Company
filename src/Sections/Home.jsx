@@ -8,6 +8,7 @@ import {cultureSlider} from "../constants/index.js";
 import SliderButton from "../Components/SliderButton.jsx";
 import PicturePlusText from "../Components/PicturePlusText.jsx";
 import Slider from "../Components/Slider.jsx";
+import Footer from "./Footer.jsx";
 
 const Home = () => {
 
@@ -22,8 +23,8 @@ const Home = () => {
     }
 
     return (
-        <div>
-            <div className='home'>
+        <div id='wrapper'>
+            <div id='home' className='home'>
 
                 <header className='flex-center w-full relative'>
                     <div className="home-popup">
@@ -207,15 +208,11 @@ const Home = () => {
                                 className='text-primary-dark-blue text-4xl ml-2 '>→</span></sub> </Link>
                         </PicturePlusText>
 
-
-
-
-
-
                     </div>
                 </div>
 
             </div>
+            <Footer/>
         </div>
     );
 };

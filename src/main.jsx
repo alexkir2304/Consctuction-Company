@@ -13,6 +13,8 @@ import ProjectLayout from "./Sections/ProjectLayout.jsx";
 import Project from "./Sections/Project.jsx";
 import {MainLayout} from "./Sections/MainLayout.jsx";
 import Home from "./Sections/Home.jsx";
+import Nav from "./Sections/Nav.jsx";
+import ScrollSmootherLayout from "./Sections/ScrollSmootherLayout.jsx";
 
 
 createRoot(document.getElementById('root')).render(
@@ -20,23 +22,25 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
         <Routes>
             <Route path='/' element={<App />} >
-
                 <Route element={<MainLayout />} >
-                    <Route index element={<Home />} />
-                    <Route path="home" element={<Home/>}/>
-                    <Route path="about" element={<About/>}/>
-                    <Route path="services" element={<Services/>}/>
-                    <Route path="projects" >
-                        <Route index element={<Projects/>}/>
-                        <Route path=':projectId' element={<Project/>}/>
+                    <Route element={<ScrollSmootherLayout />} >
+                        ScrollSmootherLayout
+                        <Route index element={<Home />} />
+                        <Route path="home" element={<Home/>}/>
+                        <Route path="about" element={<About/>}/>
+                        <Route path="services" element={<Services/>}/>
+                        <Route path="projects" >
+                            <Route index element={<Projects/>}/>
+                            <Route path=':projectId' element={<Project/>}/>
+                        </Route>
+                        <Route path="careers" element={<Careers/>}/>
+                        <Route path="subcontractors" element={<Subcontractors/>}/>
                     </Route>
-                    <Route path="careers" element={<Careers/>}/>
-                    <Route path="subcontractors" element={<Subcontractors/>}/>
-
-                </Route>
-                <Route path="*" element={<NoMatch/>}/>
+                    </Route>
+                    <Route path="*" element={<NoMatch/>}/>
             </Route>
         </Routes>
+
     </BrowserRouter>
 
 )

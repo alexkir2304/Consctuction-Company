@@ -4,13 +4,13 @@ import {projects} from "../constants/index.js";
 import MainImageOrVideo from "../Components/MainImageOrVideo.jsx";
 import MainTitle from "../Components/MainTitle.jsx";
 import SimpleImage from "../Components/SimpleImage.jsx";
+import Footer from "./Footer.jsx";
 
 const Projects = () => {
 
     return (
 
         <div>
-
             <div className="projects">
                 <header>
                     <div className="header-image">
@@ -49,6 +49,8 @@ const Projects = () => {
             {/*</div>*/}
 
             {/*<Outlet/>*/}
+
+            <Footer/>
         </div>
 
     );

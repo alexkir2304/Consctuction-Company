@@ -5,6 +5,7 @@ import {Link} from "react-router";
 import PicturePlusText from "../Components/PicturePlusText.jsx";
 import {aboutSlider} from "../constants/index.js";
 import Slider from "../Components/Slider.jsx";
+import Footer from "./Footer.jsx";
 
 const About = () => {
 
@@ -57,6 +58,7 @@ const About = () => {
 
                 <Slider sliderIndex={sliderIndex} setSliderIndex={setSliderIndex} rootArray={aboutSlider} />
             </div>
+            <Footer/>
         </div>
     );
 };

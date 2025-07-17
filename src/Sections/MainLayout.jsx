@@ -10,7 +10,6 @@ export const MainLayout = () => {
             <Gridlines/>
             <Nav/>
             <Outlet/>
-            <Footer/>
         </>
 
     )

@@ -6,6 +6,7 @@ import MainTitle from "../Components/MainTitle.jsx";
 import MainProjectsBar from "../Components/MainProjectsBar.jsx";
 import PicturePlusText from "../Components/PicturePlusText.jsx";
 import Slider from "../Components/Slider.jsx";
+import Footer from "./Footer.jsx";
 
 //i'm not going to create 1 million projects with 10 millions images for a pet-website.
 //here are some example projects just to demonstrate some of my skills.
@@ -112,6 +113,7 @@ const Project = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
 
     );
