@@ -37,12 +37,12 @@ const Project = () => {
                     <MainProjectsBar location={result[0].data.location}
                                      maintext={result[0].data.mainTitle}
                                      handleClick={() => {
-                                         const el =  document.getElementsByClassName('popup')
+                                         const el =  document.getElementsByClassName('popup2')
                                          el[0].classList.toggle('active');
                                      }}
                     />
 
-                    <div className="popup">
+                    <div className="popup2">
                         <div className="popup-item">
                             <div className="flex-center ml-10">
                                 PROJECT OVERVIEW

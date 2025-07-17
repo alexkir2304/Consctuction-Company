@@ -33,7 +33,7 @@ html, body {
 
 .grid-lines {
 
-    @apply flex fixed w-full top-0 bottom-0 right-0 left-0 z-2 box-border select-none pointer-events-none duration-700 ease-out;
+    @apply flex fixed w-full top-0 bottom-0 right-0 left-0 z-2 box-border select-none pointer-events-none duration-700 ease-out ;
 
     .line-25 {
         @apply  first:w-[35vw]  last:w-[20vw] md:first:w-[25vw]  md:last:w-[25vw] border-r-1 border-body-grid last:border-r-0 box-border;
@@ -205,7 +205,7 @@ html, body {
 
 .navbarMobile {
     @apply flex invisible fixed w-[100vw] h-[100vh] opacity-0 z-8888 bg-nav-bg-hover duration-400 ease-in;
-    transform: translate(0, -200px);
+    transform: translate(0, -100px);
 
     .navbarMobile-sidelineLeft {
         @apply w-0 lg:w-1/4 bg-primary-blue;
@@ -284,7 +284,7 @@ html, body {
 
 .navbarMobile-active {
     visibility: visible;
-    transform: translate(0, -80px);
+    transform: translate(0, 0);
     opacity: 1;
 }
 
@@ -367,7 +367,7 @@ html, body {
                 .content-news__smallNews {
                     @apply flex flex-wrap w-full md:w-1/2 p-5;
 
-                    .newsCard {
+                    .newsCard, .newsCard2  {
                         @apply w-1/2 p-5;
 
                     }
@@ -632,11 +632,11 @@ html, body {
     header {
         @apply flex-center w-full relative;
 
-        .popup {
+        .popup2 {
             @apply flex flex-wrap absolute right-[-80%] md:right-[-40%] w-[80%] md:w-[40%] h-[100vh] bg-primary-dark-blue text-nav-bg-hover z-8888 duration-400 ease-in-out ;
 
             &.active {
-                @apply right-0;
+                @apply right-0 z-99999;
             }
             .popup-item {
                 @apply flex-center-col gap-5 w-full md:w-1/2 h-[11.%] md:h-[23%] border-b-1  border-[#838dcf] ;

@@ -3,12 +3,12 @@ import React from 'react';
 const MainImageOrVideo = ({type, src}) => {
     return (
 
-            <div className="mainImageOrVideo">
+            <div className="mainImageOrVideo overflow-hidden">
 
                 {type === 'video' ? (
-                    <video src={src} autoPlay={false} muted loop playsInline={true}></video>) :
+                    <video className='mainImageOrVideo__parallax'  src={src} autoPlay={true} muted loop playsInline={true}></video>) :
 
-                    <img src={src} alt="" />
+                    <img className='mainImageOrVideo__parallax' src={src} alt="" />
                 }
 
             </div>

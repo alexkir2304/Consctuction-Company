@@ -33,6 +33,7 @@ const Footer = () => {
                 <div className="secondLine-item"><p>Turner is an Equal Opportunity Employer - race, color, religion, sex, sexual orientation, gender identity, national origin, disability, status as a protected veteran, or other characteristics protected by applicable law.</p></div>
                 <div className="secondLine-item"><p>Fraud Alert | Privacy Policy | Cookie Settings</p></div>
             </div>
+
         </div>
     );
 };

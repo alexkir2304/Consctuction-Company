@@ -15,26 +15,28 @@ import {MainLayout} from "./Sections/MainLayout.jsx";
 import Home from "./Sections/Home.jsx";
 import Nav from "./Sections/Nav.jsx";
 import ScrollSmootherLayout from "./Sections/ScrollSmootherLayout.jsx";
+import GridLinesLayout from "./Components/GridLinesLayout.jsx";
 
 
 createRoot(document.getElementById('root')).render(
 
     <BrowserRouter>
         <Routes>
-            <Route path='/' element={<App />} >
-                <Route element={<MainLayout />} >
-                    <Route element={<ScrollSmootherLayout />} >
-                        ScrollSmootherLayout
-                        <Route index element={<Home />} />
-                        <Route path="home" element={<Home/>}/>
-                        <Route path="about" element={<About/>}/>
-                        <Route path="services" element={<Services/>}/>
-                        <Route path="projects" >
-                            <Route index element={<Projects/>}/>
-                            <Route path=':projectId' element={<Project/>}/>
+            <Route path='/' element={<App />}>
+                <Route element={<MainLayout />}>
+                    <Route element={<ScrollSmootherLayout />}>
+                        <Route element={<GridLinesLayout />}>
+                            <Route index element={<Home />} />
+                            <Route path="home" element={<Home/>}/>
+                            <Route path="about" element={<About/>}/>
+                            <Route path="services" element={<Services/>}/>
+                            <Route path="projects" >
+                                <Route index element={<Projects/>}/>
+                                <Route path=':projectId' element={<Project/>}/>
+                            </Route>
+                            <Route path="careers" element={<Careers/>}/>
+                            <Route path="subcontractors" element={<Subcontractors/>}/>
                         </Route>
-                        <Route path="careers" element={<Careers/>}/>
-                        <Route path="subcontractors" element={<Subcontractors/>}/>
                     </Route>
                     </Route>
                     <Route path="*" element={<NoMatch/>}/>

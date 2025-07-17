@@ -9,6 +9,12 @@ import SliderButton from "../Components/SliderButton.jsx";
 import PicturePlusText from "../Components/PicturePlusText.jsx";
 import Slider from "../Components/Slider.jsx";
 import Footer from "./Footer.jsx";
+import {useGSAP} from "@gsap/react";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {ScrollSmoother} from "gsap/ScrollSmoother";
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const Home = () => {
 
@@ -19,8 +25,44 @@ const Home = () => {
         el[0].classList.add('home-popup__active')
         document.body.style.overflow = 'hidden';
 
-        console.log('hi')
     }
+
+    //GSAP animations
+
+    useGSAP(()=> {
+        const el = document.getElementsByClassName('mainImageOrVideo__parallax')[0];
+
+        gsap.utils.toArray('.newsCard').forEach((card, index) => {
+            gsap.fromTo(card, {
+                x: index === 0 || 200,
+                opacity:  0,
+                },
+                {
+                    x: 0,
+                    opacity:  1,
+                    duration: 1,
+                    // stagger: 0.3,
+                    ease:  'power2.inOut',
+                    scrollTrigger:  {
+                        trigger: card,
+                        start: 'top 60%'
+                    }
+                }
+
+            )
+        })
+
+        ScrollTrigger.create({
+            trigger: ".mainImageOrVideo__parallax",
+            start: "bottom bottom",
+            end: "",
+            onUpdate: (self) => {
+                const coords =  self.progress * 100/5
+
+                el.style.transform = `translateY(${coords}%)`
+            },
+        });
+    }, [])
 
     return (
         <div id='wrapper'>
@@ -112,7 +154,6 @@ const Home = () => {
                 <div className="content">
                     <div id='news' className="content-news">
 
-
                             <div className="content-news__title">
                                 News and Insights
                             </div>
@@ -122,7 +163,7 @@ const Home = () => {
                                 {/*TODO make a complex scrolling for columns*/}
 
                                 <div  className='content-news__bigNews'>
-                                    <NewsCard src={'images/news/070125-Palo-Alto-Hospital-pr.jpg'}>
+                                    <NewsCard isTransformed={true} src={'images/news/070125-Palo-Alto-Hospital-pr.jpg'}>
                                         <h1 className='p-5'>Turner/Byrne/Straight Line JV Reaches...</h1>
                                     </NewsCard>
                                 </div>
@@ -148,8 +189,6 @@ const Home = () => {
                                     </NewsCard>
                                 </div>
                             </div>
-
-
                     </div>
 
                     <div className="content-location">

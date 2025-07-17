@@ -20,33 +20,14 @@ const ScrollSmootherLayout = () => {
             smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
             effects: true, // looks for data-speed and data-lag attributes on elements
             smoothTouch: 0.1,
-            // pin: '.navbar',
-            // pinType: 'fixed',
-            // fixedMarkers: '.navbar',// much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-            // onUpdate: () => {
-            //     setTimeout(() => {
-            //         window.onscroll = () => {
-            //             if (window.scrollY >= 300) {
-            //                 el[0].classList.add("navbar-hidden")
-            //             }
-            //         }
-            //     }, 2000)
-            //
-            // },
-        });
 
-        // ScrollSmoother.create({
-        //     wrapper: '#smooth-wrapper',
-        //     content: '#smooth-content',
-        //     pin: '.navbar',
-        //     pinType: 'fixed',
-        //     fixedMarkers: '.navbar',
-        // })
+        });
 
     }, [])
 
     return (
         <div id='home'>
+
             <Outlet/>
         </div>
     );

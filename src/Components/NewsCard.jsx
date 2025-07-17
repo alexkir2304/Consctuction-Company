@@ -2,9 +2,9 @@ import React from 'react';
 import SimpleImage from "./SimpleImage.jsx";
 import {Link} from "react-router";
 
-const NewsCard = ({src, children}) => {
+const NewsCard = ({src, children, isTransformed}) => {
     return (
-        <div className='newsCard'>
+        <div className={`${isTransformed ? 'newsCard2' : 'newsCard'}`}>
             <div className='h-[60%]'>
                 <SimpleImage src={src}/>
             </div>
