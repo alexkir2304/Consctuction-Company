@@ -1,9 +1,10 @@
 import React from 'react';
 import {Outlet} from "react-router";
-import {useGSAP} from "@gsap/react";
+// import {useGSAP} from "@gsap/react";
 import {ScrollSmoother} from "gsap/ScrollSmoother";
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {useGSAP} from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 

@@ -362,15 +362,37 @@ html, body {
 
                 .content-news__bigNews {
                     @apply flex-center-col self-start w-full md:w-1/2 p-5;
+
+                    .newsCard2 {
+                        @apply duration-400 ease-in;
+
+                        &.lazyLoading-hidden-left {
+                            @apply opacity-0 translate-x-[-300px];
+                        }
+
+
+                        &.lazyLoading-visible {
+                            @apply opacity-100 translate-x-[0];
+                        }
+                    }
                 }
 
                 .content-news__smallNews {
                     @apply flex flex-wrap w-full md:w-1/2 p-5;
 
-                    .newsCard, .newsCard2  {
-                        @apply w-1/2 p-5;
+                    .newsCard {
+                        @apply  w-1/2 p-5 duration-400 ease-in;
 
+                        &.lazyLoading-hidden-right {
+                            @apply opacity-0 translate-x-20;
+                        }
+
+                        &.lazyLoading-visible {
+                            @apply opacity-100 translate-x-[0];
+                        }
                     }
+
+
                 }
             }
 

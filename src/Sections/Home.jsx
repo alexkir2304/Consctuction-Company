@@ -18,6 +18,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const Home = () => {
 
+
+    //state to control slider cards
     const [sliderIndex, setSliderIndex] = useState(1);
 
     const handleClick = () =>{
@@ -27,30 +29,65 @@ const Home = () => {
 
     }
 
-    //GSAP animations
 
+
+
+    const handleScroll = () => {
+
+            const lazyLoading = () => {
+                const loadingTriggerHeight = document.documentElement.clientHeight/2;   //the middle of the screen (Y axis)
+
+
+                const lazyParams =  ['newsCard', 'newsCard2']
+
+                lazyParams.forEach((myClass) => {
+                    const cards = document.getElementsByClassName(myClass);
+                    const cards2 = Array.from(cards);
+
+
+                    cards2.forEach((card, index) => {
+                        const coordsY = card.getBoundingClientRect().y;
+
+                        if (coordsY <= loadingTriggerHeight)  {
+                            cards[index].classList.add('lazyLoading-visible');
+                        }
+
+                    })
+                })
+            }
+
+            lazyLoading()
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    useEffect(() => {
+        handleScroll()
+    },[])
+
+    // GSAP animations
     useGSAP(()=> {
         const el = document.getElementsByClassName('mainImageOrVideo__parallax')[0];
 
-        gsap.utils.toArray('.newsCard').forEach((card, index) => {
-            gsap.fromTo(card, {
-                x: index === 0 || 200,
-                opacity:  0,
-                },
-                {
-                    x: 0,
-                    opacity:  1,
-                    duration: 1,
-                    // stagger: 0.3,
-                    ease:  'power2.inOut',
-                    scrollTrigger:  {
-                        trigger: card,
-                        start: 'top 60%'
-                    }
-                }
-
-            )
-        })
+        // gsap.utils.toArray('.newsCard').forEach((card, index) => {
+        //     gsap.fromTo(card, {
+        //         x: index === 0 || 200,
+        //         opacity:  0,
+        //         },
+        //         {
+        //             x: 0,
+        //             opacity:  1,
+        //             duration: 1,
+        //             // stagger: 0.3,
+        //             ease:  'power2.inOut',
+        //             scrollTrigger:  {
+        //                 trigger: card,
+        //                 start: 'top 60%'
+        //             }
+        //         }
+        //
+        //     )
+        // })
 
         ScrollTrigger.create({
             trigger: ".mainImageOrVideo__parallax",
@@ -63,6 +100,7 @@ const Home = () => {
             },
         });
     }, [])
+
 
     return (
         <div id='wrapper'>

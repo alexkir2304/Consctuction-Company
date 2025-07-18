@@ -4,7 +4,7 @@ import {Link} from "react-router";
 
 const NewsCard = ({src, children, isTransformed}) => {
     return (
-        <div className={`${isTransformed ? 'newsCard2' : 'newsCard'}`}>
+        <div className={`${isTransformed ? 'newsCard2 lazyLoading-hidden-left' : 'newsCard lazyLoading-hidden-right'}`}>
             <div className='h-[60%]'>
                 <SimpleImage src={src}/>
             </div>

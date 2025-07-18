@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import {BrowserRouter, Outlet, Route, Routes} from "react-router";
+import {BrowserRouter, Outlet, Route, Routes, ScrollRestoration} from "react-router";
 import './index.css'
 import App from './App.jsx'
 import NoMatch from "./Sections/NoMatch.jsx";
@@ -16,6 +16,7 @@ import Home from "./Sections/Home.jsx";
 import Nav from "./Sections/Nav.jsx";
 import ScrollSmootherLayout from "./Sections/ScrollSmootherLayout.jsx";
 import GridLinesLayout from "./Components/GridLinesLayout.jsx";
+// import { ScrollRestoration } from "react-router-dom";
 
 
 createRoot(document.getElementById('root')).render(
@@ -38,11 +39,13 @@ createRoot(document.getElementById('root')).render(
                             <Route path="subcontractors" element={<Subcontractors/>}/>
                         </Route>
                     </Route>
-                    </Route>
-                    <Route path="*" element={<NoMatch/>}/>
+                </Route>
+                <Route path="*" element={<NoMatch/>}/>
             </Route>
         </Routes>
 
     </BrowserRouter>
+
+
 
 )

@@ -1,4 +1,4 @@
-import {Outlet} from "react-router";
+import {Outlet, ScrollRestoration} from "react-router";
 
 
 const App = () => {
