@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {navigation} from "../constants/index.js";
+import {Link} from "react-router";
 
 const Nav = () => {
 
@@ -36,17 +37,17 @@ const Nav = () => {
 
         <div>
             <div className='navbar'>
-                <a href={'/home'} className='navbar-logo' >
+                <Link to={'/home'} className='navbar-logo' >
                     <h1>
                         Turner
                     </h1>
-                </a>
+                </Link>
 
                 <div className='navbar-menu'>
                     {navigation.map((item, index) => (
                         <div key={index} className='navbar-menu__item relative'>
 
-                            <a href={item.link} className='navbar-menu__item__mainLink'>{item.title}</a>
+                            <Link to={item.link} className='navbar-menu__item__mainLink'>{item.title}</Link>
 
                             <div className='navbar-menu__item__dropdown '>
                                 {item.menuSectors && item.menuSectors.map((sector, index) => (

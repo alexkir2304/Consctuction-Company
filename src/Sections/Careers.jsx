@@ -1,11 +1,38 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import MainImageOrVideo from "../Components/MainImageOrVideo.jsx";
 import MainTitle from "../Components/MainTitle.jsx";
 import SimpleImage from "../Components/SimpleImage.jsx";
 import {Link} from "react-router";
 import Footer from "./Footer.jsx";
+import {useGSAP} from "@gsap/react";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {ScrollSmoother} from "gsap/ScrollSmoother";
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const Careers = () => {
+
+    // GSAP animations
+    useGSAP(()=> {
+        const el = document.getElementsByClassName('mainImageOrVideo__parallax')[0];
+
+        ScrollTrigger.create({
+            trigger: ".mainImageOrVideo__parallax",
+            start: "bottom bottom",
+            end: "",
+            onUpdate: (self) => {
+                const coords =  self.progress * 100/5
+
+                el.style.transform = `translateY(${coords}%)`
+            },
+        });
+    }, [])
+
+    useEffect(()=> {
+        window.scrollTo(0, 0);
+    },[])
+
     return (
         <div>
             <div className="careers">

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link, useParams} from "react-router";
 import {cultureSlider, projects} from "../constants/index.js";
 import MainImageOrVideo from "../Components/MainImageOrVideo.jsx";
@@ -7,9 +7,12 @@ import MainProjectsBar from "../Components/MainProjectsBar.jsx";
 import PicturePlusText from "../Components/PicturePlusText.jsx";
 import Slider from "../Components/Slider.jsx";
 import Footer from "./Footer.jsx";
+import {useGSAP} from "@gsap/react";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {ScrollSmoother} from "gsap/ScrollSmoother";
 
-//i'm not going to create 1 million projects with 10 millions images for a pet-website.
-//here are some example projects just to demonstrate some of my skills.
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const Project = () => {
 
@@ -19,10 +22,28 @@ const Project = () => {
     console.log(projectId);
     console.log(projects)
 
-
     const  result = projects.filter((project) => project.id === +projectId);
     console.log(result);
 
+    // GSAP animations
+    useGSAP(()=> {
+        const el = document.getElementsByClassName('mainImageOrVideo__parallax')[0];
+
+        ScrollTrigger.create({
+            trigger: ".mainImageOrVideo__parallax",
+            start: "bottom bottom",
+            end: "",
+            onUpdate: (self) => {
+                const coords =  self.progress * 100/5
+
+                el.style.transform = `translateY(${coords}%)`
+            },
+        });
+    }, [])
+
+    useEffect(()=> {
+        window.scrollTo(0, 0);
+    },[])
 
     return (
 

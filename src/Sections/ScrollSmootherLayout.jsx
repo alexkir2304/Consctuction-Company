@@ -12,12 +12,9 @@ const ScrollSmootherLayout = () => {
 
     useGSAP(() => {
 
-        const lastscrollY = window.scrollY;
-        const el = document.getElementsByClassName("navbar");
-
         ScrollSmoother.create({
             // wrapper: '#wrapper',
-            content: '#home',
+            content: '#project',
             smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
             effects: true, // looks for data-speed and data-lag attributes on elements
             smoothTouch: 0.1,
@@ -26,8 +23,11 @@ const ScrollSmootherLayout = () => {
 
     }, [])
 
+
+
+
     return (
-        <div id='home'>
+        <div id='project'>
 
             <Outlet/>
         </div>

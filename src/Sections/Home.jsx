@@ -16,6 +16,8 @@ import {ScrollSmoother} from "gsap/ScrollSmoother";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
+
+
 const Home = () => {
 
 
@@ -29,16 +31,16 @@ const Home = () => {
     }
 
 
-    const handleScroll = (lazyParams) => {
+    //Lazy loading effect for all sections
+    const handleScroll = (lazyElementsClasses) => {
 
         const lazyLoading = () => {
 
-            const loadingTriggerHeight = document.documentElement.clientHeight/2;   //the middle of the screen (Y axis)
+            const loadingTriggerHeight = document.documentElement.clientHeight*2/3;  //trigger point
 
-            lazyParams.forEach((myClass) => {
+            lazyElementsClasses.forEach((myClass) => {
                 const cards = document.getElementsByClassName(myClass);
                 const cards2 = Array.from(cards);
-
 
                 cards2.forEach((card, index) => {
                     const coordsY = card.getBoundingClientRect().y;
@@ -46,42 +48,23 @@ const Home = () => {
                     if (coordsY <= loadingTriggerHeight)  {
                         cards[index].classList.add('lazyLoading-visible');
                     }
-
                 })
             })
         }
-        window.addEventListener("scroll", lazyLoading);
-
+        window.addEventListener("wheel", lazyLoading);
+        window.addEventListener("touchstart", lazyLoading);
     }
 
-
     useEffect(() => {
-        handleScroll(['newsCard', 'newsCard2'])
+        handleScroll(['newsCard', 'newsCard2', 'content-location__image', 'content-location__title','picturePlusText__image', 'picturePlusText__title', 'projectCard']);
+        window.scrollTo(0, 0);
     },[])
+
+
 
     // GSAP animations
     useGSAP(()=> {
         const el = document.getElementsByClassName('mainImageOrVideo__parallax')[0];
-
-        // gsap.utils.toArray('.newsCard').forEach((card, index) => {
-        //     gsap.fromTo(card, {
-        //         x: index === 0 || 200,
-        //         opacity:  0,
-        //         },
-        //         {
-        //             x: 0,
-        //             opacity:  1,
-        //             duration: 1,
-        //             // stagger: 0.3,
-        //             ease:  'power2.inOut',
-        //             scrollTrigger:  {
-        //                 trigger: card,
-        //                 start: 'top 60%'
-        //             }
-        //         }
-        //
-        //     )
-        // })
 
         ScrollTrigger.create({
             trigger: ".mainImageOrVideo__parallax",
@@ -98,7 +81,7 @@ const Home = () => {
 
     return (
         <div id='wrapper'>
-            <div id='home' className='home'>
+            <div  className='home'>
 
                 <header className='flex-center w-full relative'>
                     <div className="home-popup">
@@ -226,14 +209,14 @@ const Home = () => {
                     <div className="content-location">
 
                         <div className='content-location__wrapper1'>
-                            <div className="content-location__image">
+                            <div className="content-location__image lazyLoading-hidden-left">
                                 <SimpleImage
                                     src={'/images/locations/international-turkey-hero-banner_thumb-bu-closest-unit.jpg'}
                                     alt=""/>
                             </div>
 
-                            <div className="content-location__title">
-                                <p ><span>Türkiye</span></p>
+                            <div className="content-location__title lazyLoading-hidden-right">
+                                <p><span>Türkiye</span></p>
                                 <h1>Our Work In Your Local Community</h1>
                                 <p>Together we can grow communities, strengthen economies, and improve lives</p>
                             </div>
@@ -241,7 +224,7 @@ const Home = () => {
 
                         <div className='content-location__wrapper2'>
 
-                            <div  className='content-location__links' >
+                            <div className='content-location__links'>
                                 <Link to={'/'}>MEET THE Türkiye TEAM</Link>
                                 <Link to={'/'}>CHOSE ANOTHER LOCATION</Link>
                             </div>
