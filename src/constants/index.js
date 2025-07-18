@@ -175,20 +175,28 @@ export const navigation = [
                 title: 'Finished projects',
                 links: [
                     {
-                        url: '/projects',
-                        title: 'Preconsctuction',
+                        url: '/projects/1',
+                        title: 'project1',
                     },
                     {
-                        url: '/projects',
-                        title: 'Construction management',
+                        url: '/projects/2',
+                        title: 'project2',
                     },
                     {
-                        url: '/projects',
-                        title: 'Project management',
+                        url: '/projects/1',
+                        title: 'project1',
                     },
                     {
-                        url: '/projects',
-                        title: 'Lean construction',
+                        url: '/projects/2',
+                        title: 'project2',
+                    },
+                    {
+                        url: '/projects/1',
+                        title: 'project1',
+                    },
+                    {
+                        url: '/projects/2',
+                        title: 'project2',
                     },
 
                 ]
@@ -197,21 +205,30 @@ export const navigation = [
                 title: 'Current projects',
                 links: [
                     {
-                        url: '/projects',
-                        title: 'Payment program',
+                        url: '/projects/1',
+                        title: 'project1',
                     },
                     {
-                        url: '/projects',
-                        title: 'Fabrication shop',
+                        url: '/projects/2',
+                        title: 'project2',
                     },
                     {
-                        url: '/projects',
-                        title: 'Insurance',
+                        url: '/projects/1',
+                        title: 'project1',
                     },
                     {
-                        url: '/projects',
-                        title: 'Manufacturing',
+                        url: '/projects/2',
+                        title: 'project2',
                     },
+                    {
+                        url: '/projects/1',
+                        title: 'project1',
+                    },
+                    {
+                        url: '/projects/2',
+                        title: 'project2',
+                    },
+
 
                 ]
             },

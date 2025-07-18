@@ -28,6 +28,9 @@ const Home = () => {
         const el = document.getElementsByClassName('home-popup');
         el[0].classList.add('home-popup__active')
         document.body.style.overflow = 'hidden';
+
+        const el2 = document.getElementsByClassName('navbar');
+        el2[0].classList.add("navbar-hidden")
     }
 
 
@@ -90,6 +93,7 @@ const Home = () => {
                             const el = document.getElementsByClassName('home-popup');
                             el[0].classList.remove('home-popup__active')
                             document.body.style.overflow = 'auto';
+
 
                         }} className="home-popup__closeButton">
                             <button>

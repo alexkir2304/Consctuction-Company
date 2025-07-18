@@ -49,7 +49,7 @@ body::-webkit-scrollbar-thumb, .navbarMobile-menu::-webkit-scrollbar-thumb {
     @apply flex fixed w-full top-0 bottom-0 right-0 left-0 z-2 box-border select-none pointer-events-none duration-700 ease-out ;
 
     .line-25 {
-        @apply  first:w-[35vw]  last:w-[20vw] md:first:w-[25vw]  md:last:w-[25vw] border-r-1 border-body-grid last:border-r-0 box-border;
+        @apply  first:w-[35vw]  last:w-[20vw] md:first:w-[25vw]  md:last:w-[25vw] md:border-r-1 border-body-grid last:border-r-0 box-border;
 
     }
     .line-50 {
@@ -209,11 +209,12 @@ body::-webkit-scrollbar-thumb, .navbarMobile-menu::-webkit-scrollbar-thumb {
 }
 
 .nabvar-scrolled-up {
+    @apply text-gray-700;
+
     .navbar-menu__hamburger__item {
         @apply border-t-1  border-b-black;
     }
     background-color: var(--color-nav-bg-hover);
-    color: var(--text-gray-800);
 }
 
 .navbarMobile {
@@ -228,9 +229,10 @@ body::-webkit-scrollbar-thumb, .navbarMobile-menu::-webkit-scrollbar-thumb {
         @apply flex flex-col justify-start w-full lg:w-1/2 overflow-auto;
 
         .navbarMobile-menu__button {
-            @apply flex justify-end w-full min-h-[5rem] pl-10 relative mt-10 mb-10 right-10 ;
+            @apply flex justify-between w-full min-h-[5rem] pl-10 relative mt-10 mb-10 right-10 ;
             button {
-                @apply flex-center relative w-[5rem] cursor-pointer ;
+
+                @apply flex-center relative w-[5rem] text-3xl cursor-pointer first:ml-5;
                 span {
                     &:first-child {
                         @apply w-full h-[1px] bg-black rotate-45 absolute
@@ -375,7 +377,7 @@ body::-webkit-scrollbar-thumb, .navbarMobile-menu::-webkit-scrollbar-thumb {
                 @apply flex flex-col md:flex-row;
 
                 .content-news__bigNews {
-                    @apply flex-center-col self-start w-full md:w-1/2 p-5;
+                    @apply flex-center-col self-start w-full md:w-1/2 p-5 z-99;
 
                     .newsCard2 {
                         @apply duration-400 ease-in;
@@ -421,7 +423,7 @@ body::-webkit-scrollbar-thumb, .navbarMobile-menu::-webkit-scrollbar-thumb {
                 @apply flex flex-col md:flex-row justify-center w-full;
 
                 .content-location__image {
-                    @apply w-full md:w-1/2 h-full p-15 duration-400 ease-in;
+                    @apply w-full md:w-1/2 h-full p-15 duration-400 ease-in z-99;
 
                     &.lazyLoading-visible {
                         @apply opacity-100 translate-x-[0];
@@ -482,7 +484,7 @@ body::-webkit-scrollbar-thumb, .navbarMobile-menu::-webkit-scrollbar-thumb {
                 @apply flex-center-col w-full ;
 
                 .content-culture__title__content {
-                    @apply w-2/3;
+                    @apply w-[90%] md:w-2/3;
 
                     h1 {
                         @apply text-3xl md:text-5xl p-5 ;
@@ -803,10 +805,10 @@ body::-webkit-scrollbar-thumb, .navbarMobile-menu::-webkit-scrollbar-thumb {
     @apply flex flex-col w-full bg-primary-blue text-white mt-20 ;
 
     .firstLine {
-        @apply flex flex-col md:flex-row  w-full border-b-1 border-b-nav-border;
+        @apply flex  md:flex-row  w-full border-b-1 border-b-nav-border;
 
         .firstLine-item {
-            @apply flex flex-col gap-5 md:gap-0 md:flex-row justify-around items-center w-full md:w-1/2 p-5 border-r-1 border-r-nav-border first:w-full last:w-full md:first:w-1/4 md:last:w-1/4 last:border-r-0;
+            @apply flex flex-col gap-5 md:gap-0 md:flex-row justify-around items-center w-full md:w-1/2 p-5 border-r-1 border-r-nav-border first:hidden first:md:flex last:w-full md:first:w-1/4 md:last:w-1/4 last:border-r-0;
 
             .firstLine-item__logo {
                 @apply flex-center w-[35vw] lg:w-[25vw] text-3xl md:text-5xl lg:text-6xl font-bold  box-border outline-none;
@@ -885,11 +887,11 @@ body::-webkit-scrollbar-thumb, .navbarMobile-menu::-webkit-scrollbar-thumb {
 
     .mainTitle {
 
-        @apply flex flex-col justify-start gap-7 absolute left-20 lg:left-40 text-nav-border text-7xl duration-400 ease-in-out;
+        @apply flex flex-col justify-start gap-7 absolute left-20 lg:left-40 text-nav-border text-4xl md:text-7xl duration-400 ease-in-out;
 
         h1 {
             span {
-                @apply text-9xl text-orange-500
+                @apply text-7xl md:text-9xl text-orange-500
             }
         }
 
@@ -940,13 +942,13 @@ body::-webkit-scrollbar-thumb, .navbarMobile-menu::-webkit-scrollbar-thumb {
     }
 
     .picturePlusText {
-        @apply flex flex-col  w-full h-full mt-20 p-10;
+        @apply flex flex-col w-[100vw] md:w-full h-full mt-20 p-0 md:p-10;
 
         .picturePlusText__wrapper1 {
             @apply flex flex-col md:flex-row justify-center w-full;
 
             .picturePlusText__image {
-                @apply w-full md:w-1/2 pl-10 pr-10 duration-400 ease-in;
+                @apply w-full md:w-1/2 pl-10 pr-10 duration-400 ease-in z-99;
 
                 &.lazyLoading-visible {
                     @apply opacity-100 translate-x-[0];

@@ -6,7 +6,7 @@ const MainImageOrVideo = ({type, src}) => {
             <div className="mainImageOrVideo overflow-hidden">
 
                 {type === 'video' ? (
-                    <video className='mainImageOrVideo__parallax'  src={src} autoPlay={false} muted loop playsInline={true}></video>) :
+                    <video className='mainImageOrVideo__parallax'  src={src} autoPlay={true} muted loop playsInline={true}></video>) :
 
                     <img className='mainImageOrVideo__parallax' src={src} alt="" />
                 }

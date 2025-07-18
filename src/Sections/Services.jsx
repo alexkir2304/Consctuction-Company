@@ -14,7 +14,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const Services = () => {
 
-
     // GSAP animations
     useGSAP(()=> {
         const el = document.getElementsByClassName('mainImageOrVideo__parallax')[0];

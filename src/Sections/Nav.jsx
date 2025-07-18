@@ -55,7 +55,7 @@ const Nav = () => {
                                         <h1>{sector.title}</h1>
                                         <p>{sector.text && sector.text}</p>
                                         <div className='links '>{sector.links && sector.links.map((link, index) => (
-                                            <a href={link.url} key={index}  className='link'>{link.title}</a>
+                                            <Link to={link.url} key={index}  className='link'>{link.title}</Link>
                                         ))}
                                         </div>
                                     </div>
@@ -86,7 +86,7 @@ const Nav = () => {
                         document.body.style.overflowY = 'hidden';
 
                     }} className='navbar-sideLinks__item w-1/3'> Contact us</button>
-                    <a href={'/subcontractors'} className='navbar-sideLinks__item w-2/3'>Become a subcontractor</a>
+                    <Link to={'/subcontractors'} className='navbar-sideLinks__item w-2/3'>Become a subcontractor</Link>
                 </div>
 
                 <div className="popup ">
@@ -127,12 +127,15 @@ const Nav = () => {
                 <div className="navbarMobile-sidelineLeft"></div>
 
                 <div className="navbarMobile-menu">
-                    <div className="navbarMobile-menu__button">
-                        <button onClick={() => {
-                            const el = document.getElementsByClassName('navbarMobile')[0];
-                            el.classList.remove('navbarMobile-active');
-                        }}>
+                    <div onClick={() => {
+                        const el = document.getElementsByClassName('navbarMobile')[0];
+                        el.classList.remove('navbarMobile-active');
+                    }} className="navbarMobile-menu__button">
+                        <button>
+                            <Link to={'/'}>Home</Link>
+                        </button>
 
+                        <button>
                             <span></span>
                             <span></span>
                         </button>

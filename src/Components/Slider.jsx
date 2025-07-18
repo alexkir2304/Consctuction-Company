@@ -27,8 +27,8 @@ const Slider = ({sliderIndex, setSliderIndex, rootArray}) => {
                         >
                             <div className='flex flex-col items-start w-2/5 h-full p-5'>
                                 <h1 className='text-[1.1rem] text-primary-dark-blue pb-5'>{item.sliderTitle}</h1>
-                                <h1 className='text-2xl'>{item.sliderTitle2}</h1>
-                                <p className='p-5'>{item.sliderText}</p>
+                                <h1 className='md:text-2xl'>{item.sliderTitle2}</h1>
+                                <p className='md:p-5 mt-5'>{item.sliderText}</p>
 
                                 {
                                     item.sliderText &&

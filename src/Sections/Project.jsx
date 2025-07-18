@@ -60,6 +60,9 @@ const Project = () => {
                                      handleClick={() => {
                                          const el =  document.getElementsByClassName('popup2')
                                          el[0].classList.toggle('active');
+
+                                         const el2 = document.getElementsByClassName('navbar');
+                                         el2[0].classList.add("navbar-hidden")
                                      }}
                     />
 
@@ -70,7 +73,7 @@ const Project = () => {
                             </div>
 
                             <button onClick={() => {
-                                const el =  document.getElementsByClassName('popup')
+                                const el =  document.getElementsByClassName('popup2')
                                 el[0].classList.remove('active');
                             }}>
                                 <span></span>
