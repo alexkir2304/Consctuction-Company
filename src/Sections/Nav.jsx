@@ -1,42 +1,36 @@
 import React, {useEffect} from 'react';
 import {navigation} from "../constants/index.js";
-import {Link} from "react-router";
-
-
-
-
 
 const Nav = () => {
 
     const el = document.getElementsByClassName("navbar");
-
     let lastScrollY = window.scrollY;
+    const handleScroll = () => {
 
-    const navBarScroll = () => {
+        const navBarScroll = () => {
+            let currentScrollY = window.scrollY;
 
-        let currentScrollY = window.scrollY;
-
-        if (currentScrollY < lastScrollY) {                                     //the user is scrolling up
-            el[0].classList.remove("navbar-hidden")
-            window.scrollY >= 200 ?  el[0].classList.add("nabvar-scrolled-up") : el[0].classList.remove("nabvar-scrolled-up")
-        } else {                                                                //the user is scrolling down
-            if (window.scrollY >= 200 )  {
-                el[0].classList.remove("nabvar-scrolled-up")
-                el[0].classList.add("navbar-hidden")
-            } else if (window.scrollY >= 100 && window.scrollY < 200)  {
-                el[0].classList.add("navbar-hidden");
+            if (currentScrollY < lastScrollY) {                                     //the user is scrolling up
+                el[0].classList.remove("navbar-hidden")
+                window.scrollY >= 200 ?  el[0].classList.add("nabvar-scrolled-up") : el[0].classList.remove("nabvar-scrolled-up")
+            } else {                                                                //the user is scrolling down
+                if (window.scrollY >= 200 )  {
+                    el[0].classList.remove("nabvar-scrolled-up")
+                    el[0].classList.add("navbar-hidden")
+                } else if (window.scrollY >= 100 && window.scrollY < 200)  {
+                    el[0].classList.add("navbar-hidden");
+                }
             }
-        }
 
-        lastScrollY = currentScrollY;
+            lastScrollY = currentScrollY;
+        }
+        window.addEventListener("scroll", navBarScroll);
+
     }
 
-    window.addEventListener("scroll", navBarScroll);
-
     useEffect(() => {
-        navBarScroll()
+        handleScroll()
     },[])
-
 
     return (
 

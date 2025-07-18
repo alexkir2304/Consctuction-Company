@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect,  useState} from 'react';
 import {Link} from "react-router";
 import MainImageOrVideo from "../Components/MainImageOrVideo.jsx";
 import MainTitle from "../Components/MainTitle.jsx";
@@ -26,43 +26,37 @@ const Home = () => {
         const el = document.getElementsByClassName('home-popup');
         el[0].classList.add('home-popup__active')
         document.body.style.overflow = 'hidden';
-
     }
 
 
+    const handleScroll = (lazyParams) => {
+
+        const lazyLoading = () => {
+
+            const loadingTriggerHeight = document.documentElement.clientHeight/2;   //the middle of the screen (Y axis)
+
+            lazyParams.forEach((myClass) => {
+                const cards = document.getElementsByClassName(myClass);
+                const cards2 = Array.from(cards);
 
 
-    const handleScroll = () => {
+                cards2.forEach((card, index) => {
+                    const coordsY = card.getBoundingClientRect().y;
 
-            const lazyLoading = () => {
-                const loadingTriggerHeight = document.documentElement.clientHeight/2;   //the middle of the screen (Y axis)
+                    if (coordsY <= loadingTriggerHeight)  {
+                        cards[index].classList.add('lazyLoading-visible');
+                    }
 
-
-                const lazyParams =  ['newsCard', 'newsCard2']
-
-                lazyParams.forEach((myClass) => {
-                    const cards = document.getElementsByClassName(myClass);
-                    const cards2 = Array.from(cards);
-
-
-                    cards2.forEach((card, index) => {
-                        const coordsY = card.getBoundingClientRect().y;
-
-                        if (coordsY <= loadingTriggerHeight)  {
-                            cards[index].classList.add('lazyLoading-visible');
-                        }
-
-                    })
                 })
-            }
+            })
+        }
+        window.addEventListener("scroll", lazyLoading);
 
-            lazyLoading()
     }
 
-    window.addEventListener("scroll", handleScroll);
 
     useEffect(() => {
-        handleScroll()
+        handleScroll(['newsCard', 'newsCard2'])
     },[])
 
     // GSAP animations
